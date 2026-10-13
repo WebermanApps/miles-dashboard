@@ -119,6 +119,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 .share{margin:22px 0 6px}footer{margin-top:10px}
 @media(min-width:1280px) and (max-width:1699px){.topbar .tb{max-width:1300px}}@media(min-width:1700px){.topbar .tb{max-width:1500px}}@media(min-width:1900px){.topbar .tb{padding:0 5vw}}@media(min-width:2400px){.topbar .tb{max-width:1900px}}@media(min-width:3200px){.topbar .tb{max-width:2600px}}
 @media(min-width:1280px){.grid{grid-template-columns:1fr 1fr}.grid .recent{grid-column:auto}}
+.topbar .homelink,.tbname,.tbupd{white-space:nowrap}.tbupd .short{display:none}@media(max-width:600px){.tbupd .full{display:none}.tbupd .short{display:inline}.tbname{font-size:1rem}}
 </style><script src="ptr.js" defer></script>
 </head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -130,7 +131,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
 </defs></svg>
-<header class="topbar"><div class="tb"><a class="homelink" href="https://webermanapps.github.io/a-2sipntzsp385oxy3/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a><span class="tbname">Miles Agent</span><span class="tbupd">Updated <span id="tupd"></span></span></div></header>
+<header class="topbar"><div class="tb"><a class="homelink" href="https://webermanapps.github.io/a-2sipntzsp385oxy3/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a><span class="tbname">Miles Agent</span><span class="tbupd"><span class="full">Updated <span id="tupd"></span></span><span class="short" id="tupds"></span></span></div></header>
 <div class="wrap">
 <div class="wm">Max Weberman · Command Center</div>
 <h1 id="agent"></h1><div class="role" id="role"></div>
@@ -149,7 +150,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 <script src="data.js"></script>
 <script>
 const D=window.DASH,$=id=>document.getElementById(id),e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-$('agent').textContent=D.agent;$('role').textContent=D.role;$('tupd').textContent=D.updated;$('status').textContent=D.status;document.title=D.agent+' · Command Center';
+$('agent').textContent=D.agent;$('role').textContent=D.role;$('tupd').textContent=D.updated;$('tupds').textContent=String(D.updated).replace(/^\w+ (\d+), \d{4}, /,'$1 · ').replace(/^(\d+) · /,(m,d)=>String(D.updated).split(' ')[0]+' '+d+' · ');$('status').textContent=D.status;document.title=D.agent+' · Command Center';
 const R=D.report;if(R&&R.lines&&R.lines.length){const G=R.lines.map(g=>typeof g==='string'?{category:'',lines:[g]}:g),n=G.reduce((a,g)=>a+(g.lines||[]).length,0);
  $('utitle').textContent=R.title||'Update';$('uts').textContent=R.timestamp||'';$('rsum').textContent=n+(n===1?' item':' items')+(G[0].lines&&G[0].lines[0]?' · '+G[0].lines[0]:'');
  $('ulines').innerHTML=G.map((g,gi)=>{const rows=(g.lines||[]).map(l=>`<li>${e(l)}</li>`).join('');return g.category?`<details class="ufold"${gi===0?' open':''}><summary>${e(g.category)}<span class="ucount">${(g.lines||[]).length}</span></summary><ol class="unum">${rows}</ol></details>`:`<ol class="unum">${rows}</ol>`}).join('');$('rep').hidden=false}
