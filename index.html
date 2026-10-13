@@ -54,6 +54,31 @@ a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3p
 .topnav{background:#fff;border-bottom:1px solid var(--mw-border)}.topnav .tn{max-width:1100px;margin:0 auto;padding:0 18px}.topnav .homelink{display:inline-flex;align-items:center;gap:6px;min-height:44px;min-width:44px;color:var(--mw-foreground);text-decoration:none;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:var(--mw-tracking-label)}
 .topnav .homelink:hover{text-decoration:underline}
 @media(min-width:1280px) and (max-width:1699px){.topnav .tn{max-width:1300px}}@media(min-width:1700px){.topnav .tn{max-width:1500px}}@media(min-width:1900px){.topnav .tn{padding:0 5vw}}@media(min-width:2400px){.topnav .tn{max-width:1900px}}@media(min-width:3200px){.topnav .tn{max-width:2600px}}
+
+/* Max's settled dashboard picks (Oct 13 23:06): spaced-caps compact Apps Home link, big-title Fresh Start bar with fold-out sections and numbered rows (saffron), two-up color-edge open-item cards with square corners, Waiting On Max tinted color-band header with side-rule rows, pill status chips */
+.topnav .homelink{color:#1F7A7A;letter-spacing:.16em;font-size:.78rem}
+.utitle{font-size:clamp(1.6rem,5vw,2.2rem)}
+.ulines{display:grid;gap:10px;align-items:start}
+.ufold{border:1px solid var(--mw-border);border-radius:12px;background:#fff}
+.ufold summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:10px;padding:0 14px;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:#525252;list-style:none}
+.ufold summary::-webkit-details-marker{display:none}
+.ufold summary:before{content:"";width:7px;height:7px;border-right:2px solid #737373;border-bottom:2px solid #737373;transform:rotate(-45deg);transition:transform var(--mw-dur)}
+.ufold[open] summary:before{transform:rotate(45deg)}
+.ucount{margin-left:auto;font-size:.72rem;color:#8a6a10;background:#FBF1D6;border-radius:999px;padding:1px 8px}
+.unum{counter-reset:n;list-style:none;margin:0;padding:0 14px 12px}
+.unum li{counter-increment:n;display:flex;gap:10px;padding:7px 0;border-top:1px solid var(--mw-border);font-size:.95rem}
+.unum li:first-child{border-top:0}
+.unum li:before{content:counter(n);flex:none;width:1.6em;height:1.6em;border-radius:50%;background:#FBF1D6;color:#8a6a10;font:700 .8rem var(--mw-font-heading);display:flex;align-items:center;justify-content:center;margin-top:.1em}
+ul.two{display:grid;gap:12px}@media(min-width:640px){ul.two{grid-template-columns:1fr 1fr}}
+ul.two li.item.edge{border:1px solid var(--mw-border);border-left:4px solid #B8742A;border-radius:0;padding:14px 16px;background:#fff}
+ul.two li.item.edge:first-child{padding-top:14px}
+li.edge.e-max{border-left-color:#B8742A}li.edge.e-watch{border-left-color:#1F7A7A}li.edge.e-prog{border-left-color:#525252}
+.dcard{padding-top:0;overflow:hidden}
+.dcard h2.band{margin:0 -1.15rem 14px;padding:12px 1.15rem;background:#FBF1D6;border-bottom:1px solid #F0E2B8;font-size:1.05rem;text-transform:uppercase;letter-spacing:.14em}
+ol.siderule{list-style:none;padding:0;counter-reset:d}
+ol.siderule li{border-left:3px solid #B8742A;padding:6px 0 6px 12px;margin:0 0 10px}
+.pill{border-radius:999px}
+@media(min-width:1280px){.grid .recent{grid-column:span 2}}
 </style><script src="ptr.js" defer></script>
 </head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -74,8 +99,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3p
 <div class="status"><div class="lbl">Current Status · Updated <span id="upd"></span></div><div id="status"></div></div>
 <div class="grid">
 <section class="card span"><h2><svg class="ic"><use href="#i-grid"/></svg>Apps</h2><div class="apps" id="apps"></div></section>
-<section class="card"><h2><svg class="ic"><use href="#i-list"/></svg>Open Items</h2><ul id="open"></ul></section>
-<section class="card"><h2><svg class="ic"><use href="#i-q"/></svg>Decisions For Max</h2><ol id="dec"></ol>
+<section class="card span"><h2><svg class="ic"><use href="#i-list"/></svg>Open Items</h2><ul id="open" class="two"></ul></section>
+<section class="card dcard"><h2 class="band"><svg class="ic"><use href="#i-q"/></svg>Waiting On Max</h2><ol id="dec" class="siderule"></ol>
 <h2 style="margin-top:22px"><svg class="ic"><use href="#i-clock"/></svg>Routines</h2><ul id="rout"></ul></section>
 <section class="card span recent"><h2><svg class="ic"><use href="#i-check"/></svg>Recent Work</h2><ul id="recent"></ul></section>
 </div>
@@ -86,12 +111,12 @@ a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3p
 <script>
 const D=window.DASH,$=id=>document.getElementById(id),e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const R=D.report;if(R&&R.lines&&R.lines.length){$('utitle').textContent=R.title||'Update';$('uts').textContent=R.timestamp||'';
-$('ulines').innerHTML=R.lines.map(g=>typeof g==='string'?`<div class="ug"><p>${e(g)}</p></div>`:`<div class="ug"><span class="lbl">${e(g.category||'')}</span>${(g.lines||[]).map(l=>`<p>${e(l)}</p>`).join('')}</div>`).join('')}else $('ubar').style.display='none';
+$('ulines').innerHTML=R.lines.map((g,gi)=>{if(typeof g==='string')g={category:'',lines:[g]};const rows=(g.lines||[]).map(l=>`<li>${e(l)}</li>`).join('');return g.category?`<details class="ufold"${gi===0?' open':''}><summary>${e(g.category)}<span class="ucount">${(g.lines||[]).length}</span></summary><ol class="unum">${rows}</ol></details>`:`<ol class="unum">${rows}</ol>`}).join('')}else $('ubar').style.display='none';
 {const A=D.alerts||[];if(A.length){const u=A.filter(a=>a.level==='urgent').length,w=A.length-u;$('asum').textContent=[u?u+' Urgent':'',w?w+(w>1?' Warnings':' Warning'):''].filter(Boolean).join(' · ');
 $('alist').innerHTML=A.map(a=>`<li><span class="lv ${a.level==='urgent'?'urgent':'warning'}">${a.level==='urgent'?'Urgent':'Warning'}</span>${e(a.text)}</li>`).join('');$('alerts').hidden=false}}
 $('agent').textContent=D.agent;$('role').textContent=D.role;$('upd').textContent=D.updated;$('status').textContent=D.status;
 $('apps').innerHTML=D.apps.map(a=>`<a class="app mw-hover" href="${e(a.url)}" target="_blank" rel="noopener"><div><b>${e(a.name)}</b><span>${e(a.note||'')}</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>`).join('');
-$('open').innerHTML=D.openItems.map(i=>`<li class="item"><div class="row"><div class="t">${i.pri?`<span class="pill p1">${e(i.pri)}</span>`:''}${e(i.title)}</div><span class="pill">${e(i.state)}</span></div><div class="d">${e(i.detail)}</div></li>`).join('');
+$('open').innerHTML=D.openItems.map(i=>`<li class="item edge ${/watch/i.test(i.state)?'e-watch':/max/i.test(i.state)?'e-max':'e-prog'}"><div class="row"><div class="t">${i.pri?`<span class="pill p1">${e(i.pri)}</span>`:''}${e(i.title)}</div><span class="pill">${e(i.state)}</span></div><div class="d">${e(i.detail)}</div></li>`).join('');
 $('dec').innerHTML=D.decisions.map(d=>`<li>${e(d)}</li>`).join('');
 $('rout').innerHTML=D.routines.map(r=>`<li class="item"><div class="t">${e(r.name)}</div><div class="d">${e(r.when)}</div></li>`).join('');
 $('recent').innerHTML=D.recent.map(r=>`<li class="item r"><span class="date">${e(r.date)}</span>${e(r.text)}</li>`).join('');
