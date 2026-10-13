@@ -4,18 +4,18 @@ window.DASH = {
   // Update bar: routines replace this (Morning Report 4:47 ICT, Evening Report 18:03 ICT).
   // lines can be plain strings, or groups: { category: "...", lines: ["..."] }
   report: {
-    title: "Morning Report",
-    timestamp: "Oct 13, 2026 · 14:59 ICT",
+    title: "Evening Report",
+    timestamp: "Oct 13, 2026 · 18:05 ICT",
     lines: [
-      { category: "Cards & Points", lines: [
-        "New credit card pick: waiting on Max's priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business).",
-        "Points-balances inventory for Portfolio: waiting on Max's balances.",
-        "Ray-Ban 1,500 Capital One bonus points: pending, watching for them to post." ] },
-      { category: "Mom's Amex", lines: [
-        "Offers refresh waiting on a new screen recording (last one is from Oct 10).",
-        "Upload reminder every 3 days, starting Oct 14." ] },
-      { category: "Dashboard", lines: [
-        "Daily reports: Morning 4:47 ICT, Evening 18:03 ICT." ] }
+      { category: "Today", lines: [
+        "Launched this dashboard and took over the new-card task and points inventory from Portfolio.",
+        "Mom's Shopping Quiz and Mom's Amex Offers got one-tap Submit, a Built by footer, and no emojis.",
+        "All three pages got a back link, pull-down-to-refresh, and phone and laptop checks." ] },
+      { category: "Tomorrow", lines: [
+        "Morning Report goes up by 5:00 ICT.",
+        "Mom's offers upload reminder fires mid-morning; the refresh starts as soon as a new recording lands.",
+        "Still waiting on Max for new-card priorities and points balances.",
+        "Watching for the Ray-Ban bonus points to post." ] }
     ]
   },
   // Urgent and warning items: shown as ONE collapsed line ("1 Urgent · 2 Warnings") that expands on tap/Enter.
@@ -23,7 +23,7 @@ window.DASH = {
   alerts: [],
   agent: "Miles Agent",
   role: "Head Of All Credit Card Points Projects",
-  updated: "Oct 13, 2026, 2:59 PM ICT",
+  updated: "Oct 13, 2026, 6:05 PM ICT",
   status: "Took over new-card and points work from Portfolio today. Waiting on Max for points balances and a new offers screen recording.",
   apps: [
     { name: "Mom's Amex Offers", url: "https://webermanapps.github.io/janes-amex-offers/", note: "Current Amex Offers, easy to scan" },
@@ -44,10 +44,10 @@ window.DASH = {
   routines: [
     { name: "Morning Report", when: "Daily, 4:47 ICT" },
     { name: "Evening Report", when: "Daily, 18:03 ICT" },
-    { name: "Mom's Recording Upload Reminder", when: "Every 3 days from Oct 14" },
-    { name: "Sunday Amex Offers Update", when: "Sundays, 10:17 ICT" }
+    { name: "Mom's Recording Upload Reminder", when: "Every 3 days, next Oct 14" }
   ],
   recent: [
+    { date: "Oct 13", text: "Back links and pull-down-to-refresh on all three pages" },
     { date: "Oct 13", text: "Added one-tap Submit to both of Mom's apps; picks now come straight to Miles" },
     { date: "Oct 13", text: "Launched this dashboard; took over the new-card task and points inventory" },
     { date: "Oct 10", text: "Renamed both apps to Mom's" },
