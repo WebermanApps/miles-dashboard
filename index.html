@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="brand-tokens.css">
 <style>
 *{box-sizing:border-box}html{color-scheme:light}
-body{margin:0;background:#FBF8F2;color:var(--mw-foreground);font-family:var(--mw-font-body);font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+body{margin:0;background:#FBF8F2;color:var(--mw-foreground);font-family:var(--mw-font-body);font-size:1rem;line-height:1.55;-webkit-text-size-adjust:100%}
 .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 0}
 h1,h2,h3{font-family:var(--mw-font-heading);font-weight:700;line-height:1.1;letter-spacing:-.01em;margin:0}
-h1{font-size:clamp(2.3rem,7vw,3.6rem)}h2{font-size:1.5rem;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+h1{font-size:clamp(2.3rem,7vw,3.6rem)}@media(min-width:1700px){h1{font-size:4rem}}h2{font-size:1.5rem;display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .wm{font-family:var(--mw-font-heading);letter-spacing:var(--mw-tracking-label);font-size:.85rem;color:var(--mw-muted-text);text-transform:uppercase}
 .role{color:var(--mw-muted-text);margin:4px 0 14px}
 .status{background:#fff;border:1px solid var(--mw-border);border-left:3px solid #B8742A;border-radius:12px;padding:14px 16px}
@@ -15,9 +15,9 @@ h1{font-size:clamp(2.3rem,7vw,3.6rem)}h2{font-size:1.5rem;display:flex;align-ite
 .grid{display:grid;gap:18px;margin-top:22px}
 @media(min-width:760px){.grid{grid-template-columns:1fr 1fr}.span{grid-column:1/-1}}
 @media(min-width:1200px){.wrap{padding-top:44px}}
-section.card{background:#fff;border:1px solid var(--mw-border);border-radius:14px;padding:18px}
+section.card{background:#fff;border:1px solid var(--mw-border);border-radius:14px;padding:1.15rem}
 .apps{display:grid;gap:12px}@media(min-width:760px){.apps{grid-template-columns:1fr 1fr}}
-a.app{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:14px 16px;border:1px solid var(--mw-border);border-radius:12px;text-decoration:none;color:inherit;background:#fff}
+a.app{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:4rem;padding:.9rem 1rem;border:1px solid var(--mw-border);border-radius:12px;text-decoration:none;color:inherit;background:#fff}
 a.app b{font-family:var(--mw-font-heading);font-size:1.25rem;display:block}a.app span{color:var(--mw-muted-text);font-size:.92rem}
 a.app svg{flex:none;transition:transform var(--mw-dur) var(--mw-ease)}a.app:hover svg{transform:translateX(3px)}
 ul{list-style:none;margin:0;padding:0}li.item{padding:12px 0;border-top:1px solid var(--mw-border)}li.item:first-child{border-top:0;padding-top:0}
@@ -26,14 +26,23 @@ ul{list-style:none;margin:0;padding:0}li.item{padding:12px 0;border-top:1px soli
 .pill{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--mw-border);border-radius:999px;padding:2px 9px;white-space:nowrap;color:#525252}
 .p1{border-color:#B8742A;color:#8a5418;font-weight:600;margin-right:6px}
 ol{margin:0;padding-left:22px}ol li{padding:6px 0}
-.date{font-family:var(--mw-font-heading);color:var(--mw-muted-text);min-width:64px;display:inline-block}
-.ic{width:20px;height:20px;stroke:#B8742A;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.date{font-family:var(--mw-font-heading);color:var(--mw-muted-text);min-width:4.5em;display:inline-block}
+.ic{width:1.25rem;height:1.25rem;stroke:#B8742A;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .share{display:flex;justify-content:center;margin:34px 0 10px}
 button.btn{font:600 .85rem var(--mw-font-body);text-transform:uppercase;letter-spacing:var(--mw-tracking-label);border:2px solid var(--mw-primary);background:transparent;color:var(--mw-primary);padding:14px 32px;min-height:48px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
 button.btn:hover{background:var(--mw-primary);color:var(--mw-primary-foreground)}button.btn:hover .ic{stroke:currentColor}
 footer{text-align:center;padding:18px 0 34px;color:var(--mw-muted-text);font-size:.9rem;border-top:1px solid var(--mw-border);margin-top:16px}
 footer a{color:var(--mw-foreground);text-decoration:none;border-bottom:1px solid rgba(10,10,10,.3)}footer a:hover{border-color:var(--mw-foreground)}
 #toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#fff;border:1px solid var(--mw-border);padding:8px 14px;border-radius:10px;display:none}
+.ubar{background:#fff;border-bottom:1px solid var(--mw-border);border-top:3px solid #B8742A}
+.ubin{max-width:1100px;margin:0 auto;padding:14px 18px}
+.uhead{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;margin-bottom:6px}
+.utitle{font-family:var(--mw-font-heading);font-weight:700;font-size:1.3rem}.uts{color:var(--mw-muted-text);font-size:.85rem}
+.ulines{display:grid;gap:8px}@media(min-width:760px){.ulines{grid-template-columns:repeat(2,1fr)}}
+.ug{font-size:.95rem}.ug .lbl{display:block}.ug p{margin:0}
+@media(min-width:1700px){html{font-size:18px}.wrap,.ubin{max-width:1500px}.grid{grid-template-columns:repeat(3,1fr)}.ulines{grid-template-columns:repeat(4,1fr)}.grid .recent{grid-column:auto}}
+@media(min-width:2400px){html{font-size:22px}.wrap,.ubin{max-width:1900px}}
+@media(min-width:3200px){html{font-size:30px}.wrap,.ubin{max-width:2600px}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
@@ -44,6 +53,7 @@ footer a{color:var(--mw-foreground);text-decoration:none;border-bottom:1px solid
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
 </defs></svg>
+<div class="ubar" id="ubar"><div class="ubin"><div class="uhead"><span class="utitle" id="utitle"></span><span class="uts" id="uts"></span></div><div class="ulines" id="ulines"></div></div></div>
 <div class="wrap">
 <div class="wm">Max Weberman · Command Center</div>
 <h1 id="agent"></h1><div class="role" id="role"></div>
@@ -53,7 +63,7 @@ footer a{color:var(--mw-foreground);text-decoration:none;border-bottom:1px solid
 <section class="card"><h2><svg class="ic"><use href="#i-list"/></svg>Open Items</h2><ul id="open"></ul></section>
 <section class="card"><h2><svg class="ic"><use href="#i-q"/></svg>Decisions For Max</h2><ol id="dec"></ol>
 <h2 style="margin-top:22px"><svg class="ic"><use href="#i-clock"/></svg>Routines</h2><ul id="rout"></ul></section>
-<section class="card span"><h2><svg class="ic"><use href="#i-check"/></svg>Recent Work</h2><ul id="recent"></ul></section>
+<section class="card span recent"><h2><svg class="ic"><use href="#i-check"/></svg>Recent Work</h2><ul id="recent"></ul></section>
 </div>
 <div class="share"><button class="btn mw-hover" id="share"><svg class="ic"><use href="#i-share"/></svg>Share</button></div>
 <footer>Built by <a class="mw-hover" href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></footer>
@@ -61,6 +71,8 @@ footer a{color:var(--mw-foreground);text-decoration:none;border-bottom:1px solid
 <script src="data.js"></script>
 <script>
 const D=window.DASH,$=id=>document.getElementById(id),e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const R=D.report;if(R&&R.lines&&R.lines.length){$('utitle').textContent=R.title||'Update';$('uts').textContent=R.timestamp||'';
+$('ulines').innerHTML=R.lines.map(g=>typeof g==='string'?`<div class="ug"><p>${e(g)}</p></div>`:`<div class="ug"><span class="lbl">${e(g.category||'')}</span>${(g.lines||[]).map(l=>`<p>${e(l)}</p>`).join('')}</div>`).join('')}else $('ubar').style.display='none';
 $('agent').textContent=D.agent;$('role').textContent=D.role;$('upd').textContent=D.updated;$('status').textContent=D.status;
 $('apps').innerHTML=D.apps.map(a=>`<a class="app mw-hover" href="${e(a.url)}" target="_blank" rel="noopener"><div><b>${e(a.name)}</b><span>${e(a.note||'')}</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>`).join('');
 $('open').innerHTML=D.openItems.map(i=>`<li class="item"><div class="row"><div class="t">${i.pri?`<span class="pill p1">${e(i.pri)}</span>`:''}${e(i.title)}</div><span class="pill">${e(i.state)}</span></div><div class="d">${e(i.detail)}</div></li>`).join('');
