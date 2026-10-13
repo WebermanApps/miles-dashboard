@@ -46,6 +46,11 @@ footer a{color:var(--mw-foreground);text-decoration:none;border-bottom:1px solid
 a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3px}
 @media(min-width:1900px){.wrap,.ubin{padding-left:5vw;padding-right:5vw}.wrap{padding-top:5vh}footer{padding-bottom:5vh}}
 @media(min-width:1280px) and (max-width:1699px){.wrap,.ubin{max-width:1300px}.grid{grid-template-columns:repeat(3,1fr)}.grid .recent{grid-column:auto}.ulines{grid-template-columns:repeat(3,1fr)}}
+.alerts{background:#fff;border:1px solid var(--mw-border);border-radius:12px;margin:0 0 12px}
+.alerts summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:8px;padding:0 14px;font-weight:600;list-style:none}
+.alerts summary::-webkit-details-marker{display:none}.alerts summary:before{content:"";width:8px;height:8px;border-right:2px solid #737373;border-bottom:2px solid #737373;transform:rotate(-45deg);transition:transform var(--mw-dur)}
+.alerts[open] summary:before{transform:rotate(45deg)}.alerts ul{padding:0 14px 12px}.alerts li{padding:6px 0;border-top:1px solid var(--mw-border)}
+.lv{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-right:8px;font-weight:600}.lv.urgent{color:#b42318}.lv.warning{color:#8a5418}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
@@ -60,6 +65,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3p
 <div class="wrap">
 <div class="wm">Max Weberman · Command Center</div>
 <h1 id="agent"></h1><div class="role" id="role"></div>
+<details class="alerts" id="alerts" hidden><summary id="asum"></summary><ul id="alist"></ul></details>
 <div class="status"><div class="lbl">Current Status · Updated <span id="upd"></span></div><div id="status"></div></div>
 <div class="grid">
 <section class="card span"><h2><svg class="ic"><use href="#i-grid"/></svg>Apps</h2><div class="apps" id="apps"></div></section>
@@ -76,6 +82,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3p
 const D=window.DASH,$=id=>document.getElementById(id),e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const R=D.report;if(R&&R.lines&&R.lines.length){$('utitle').textContent=R.title||'Update';$('uts').textContent=R.timestamp||'';
 $('ulines').innerHTML=R.lines.map(g=>typeof g==='string'?`<div class="ug"><p>${e(g)}</p></div>`:`<div class="ug"><span class="lbl">${e(g.category||'')}</span>${(g.lines||[]).map(l=>`<p>${e(l)}</p>`).join('')}</div>`).join('')}else $('ubar').style.display='none';
+{const A=D.alerts||[];if(A.length){const u=A.filter(a=>a.level==='urgent').length,w=A.length-u;$('asum').textContent=[u?u+' Urgent':'',w?w+(w>1?' Warnings':' Warning'):''].filter(Boolean).join(' · ');
+$('alist').innerHTML=A.map(a=>`<li><span class="lv ${a.level==='urgent'?'urgent':'warning'}">${a.level==='urgent'?'Urgent':'Warning'}</span>${e(a.text)}</li>`).join('');$('alerts').hidden=false}}
 $('agent').textContent=D.agent;$('role').textContent=D.role;$('upd').textContent=D.updated;$('status').textContent=D.status;
 $('apps').innerHTML=D.apps.map(a=>`<a class="app mw-hover" href="${e(a.url)}" target="_blank" rel="noopener"><div><b>${e(a.name)}</b><span>${e(a.note||'')}</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>`).join('');
 $('open').innerHTML=D.openItems.map(i=>`<li class="item"><div class="row"><div class="t">${i.pri?`<span class="pill p1">${e(i.pri)}</span>`:''}${e(i.title)}</div><span class="pill">${e(i.state)}</span></div><div class="d">${e(i.detail)}</div></li>`).join('');

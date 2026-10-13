@@ -18,6 +18,9 @@ window.DASH = {
         "Daily reports: Morning 4:47 ICT, Evening 18:03 ICT." ] }
     ]
   },
+  // Urgent and warning items: shown as ONE collapsed line ("1 Urgent · 2 Warnings") that expands on tap/Enter.
+  // level: "urgent" or "warning". Empty list = hidden.
+  alerts: [],
   agent: "Miles Agent",
   role: "Head Of All Credit Card Points Projects",
   updated: "Oct 13, 2026, 2:59 PM ICT",
@@ -45,6 +48,7 @@ window.DASH = {
     { name: "Sunday Amex Offers Update", when: "Sundays, 10:17 ICT" }
   ],
   recent: [
+    { date: "Oct 13", text: "Added one-tap Submit to both of Mom's apps; picks now come straight to Miles" },
     { date: "Oct 13", text: "Launched this dashboard; took over the new-card task and points inventory" },
     { date: "Oct 10", text: "Renamed both apps to Mom's" },
     { date: "Oct 10", text: "Took over the Amex workstream" },
