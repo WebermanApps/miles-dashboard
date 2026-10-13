@@ -4,26 +4,26 @@ window.DASH = {
   // Update bar: routines replace this (Morning Report 4:47 ICT, Evening Report 18:03 ICT).
   // lines can be plain strings, or groups: { category: "...", lines: ["..."] }
   report: {
-    title: "Evening Report",
-    timestamp: "Oct 13, 2026 · 18:05 ICT",
+    title: "Fresh Start",
+    timestamp: "Oct 13, 2026 · 19:21 ICT",
     lines: [
-      { category: "Today", lines: [
-        "Launched this dashboard and took over the new-card task and points inventory from Portfolio.",
-        "Mom's Shopping Quiz and Mom's Amex Offers got one-tap Submit, a Built by footer, and no emojis.",
-        "All three pages got a back link, pull-down-to-refresh, and phone and laptop checks." ] },
-      { category: "Tomorrow", lines: [
-        "Morning Report goes up by 5:00 ICT.",
-        "Mom's offers upload reminder fires mid-morning; the refresh starts as soon as a new recording lands.",
-        "Still waiting on Max for new-card priorities and points balances.",
-        "Watching for the Ray-Ban bonus points to post." ] }
+      { category: "Ready For Max", lines: [
+        "New-card recommendation: starts as soon as Max gives his priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business).",
+        "Points inventory: starts as soon as Max gives his balances." ] },
+      { category: "Decision Waiting", lines: [
+        "Switch Mom's apps to the private Submit receiver? Ready and tested." ] },
+      { category: "Mom's Amex", lines: [
+        "Offers video not found in Dropbox yet; refresh waits on it." ] }
     ]
   },
   // Urgent and warning items: shown as ONE collapsed line ("1 Urgent · 2 Warnings") that expands on tap/Enter.
   // level: "urgent" or "warning". Empty list = hidden.
-  alerts: [],
+  alerts: [
+    { level: "warning", text: "Mom's offers video not in Dropbox yet; offers still from Oct 10." }
+  ],
   agent: "Miles Agent",
   role: "Head Of All Credit Card Points Projects",
-  updated: "Oct 13, 2026, 6:05 PM ICT",
+  updated: "Oct 13, 2026, 7:21 PM ICT",
   status: "Took over new-card and points work from Portfolio today. Waiting on Max for points balances and a new offers screen recording.",
   apps: [
     { name: "Mom's Amex Offers", url: "https://webermanapps.github.io/janes-amex-offers/", note: "Current Amex Offers, easy to scan" },
@@ -38,6 +38,7 @@ window.DASH = {
     { pri: "", title: "Capital One Ray-Ban Bonus", detail: "Watching for the 1,500 bonus points to post.", state: "Watching" }
   ],
   decisions: [
+    "Switch Mom's apps to the private Submit receiver (ready and tested)?",
     "Bring both of Mom's apps up to the newest brand rules?",
     "Rename the janes-amex-offers repo? This breaks the old link."
   ],
