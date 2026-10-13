@@ -79,6 +79,8 @@ ol.siderule{list-style:none;padding:0;counter-reset:d}
 ol.siderule li{border-left:3px solid #B8742A;padding:6px 0 6px 12px;margin:0 0 10px}
 .pill{border-radius:999px}
 @media(min-width:1280px){.grid .recent{grid-column:span 2}}
+.appsTop{max-width:1100px;margin:0 auto;padding:14px 18px}
+@media(min-width:1280px) and (max-width:1699px){.appsTop{max-width:1300px}}@media(min-width:1700px){.appsTop{max-width:1500px}}@media(min-width:1900px){.appsTop{padding-left:5vw;padding-right:5vw}}@media(min-width:2400px){.appsTop{max-width:1900px}}@media(min-width:3200px){.appsTop{max-width:2600px}}
 </style><script src="ptr.js" defer></script>
 </head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -91,6 +93,7 @@ ol.siderule li{border-left:3px solid #B8742A;padding:6px 0 6px 12px;margin:0 0 1
 <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
 </defs></svg>
 <nav class="topnav"><div class="tn"><a class="homelink" href="https://webermanapps.github.io/a-2sipntzsp385oxy3/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a></div></nav>
+<div class="appsTop"><section class="card"><h2><svg class="ic"><use href="#i-grid"/></svg>Apps</h2><div class="apps" id="apps"></div></section></div>
 <div class="ubar" id="ubar"><div class="ubin"><div class="uhead"><span class="utitle" id="utitle"></span><span class="uts" id="uts"></span></div><div class="ulines" id="ulines"></div></div></div>
 <div class="wrap">
 <div class="wm">Max Weberman · Command Center</div>
@@ -98,7 +101,6 @@ ol.siderule li{border-left:3px solid #B8742A;padding:6px 0 6px 12px;margin:0 0 1
 <details class="alerts" id="alerts" hidden><summary id="asum"></summary><ul id="alist"></ul></details>
 <div class="status"><div class="lbl">Current Status · Updated <span id="upd"></span></div><div id="status"></div></div>
 <div class="grid">
-<section class="card span"><h2><svg class="ic"><use href="#i-grid"/></svg>Apps</h2><div class="apps" id="apps"></div></section>
 <section class="card span"><h2><svg class="ic"><use href="#i-list"/></svg>Open Items</h2><ul id="open" class="two"></ul></section>
 <section class="card dcard"><h2 class="band"><svg class="ic"><use href="#i-q"/></svg>Waiting On Max</h2><ol id="dec" class="siderule"></ol>
 <h2 style="margin-top:22px"><svg class="ic"><use href="#i-clock"/></svg>Routines</h2><ul id="rout"></ul></section>
