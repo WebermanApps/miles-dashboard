@@ -4,16 +4,17 @@ window.DASH = {
   // Update bar: routines replace this (Morning Report 4:47 ICT, Evening Report 18:03 ICT).
   // lines can be plain strings, or groups: { category: "...", lines: ["..."] }
   report: {
-    title: "Fresh Start",
-    timestamp: "Oct 13, 2026 · 23:40 ICT",
+    title: "Morning Report",
+    timestamp: "Oct 14, 2026 · 4:55 ICT",
     lines: [
-      { category: "Ready For Max", lines: [
-        "New-card recommendation: starts as soon as Max gives his priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business).",
-        "Points inventory: starts as soon as Max gives his balances." ] },
-      { category: "Decision Waiting", lines: [
-        "Switch Mom's apps to the private Submit receiver? Ready and tested." ] },
-      { category: "Mom's Amex", lines: [
-        "Offers refreshed from Oct 12 screen recording; 102 offers live." ] }
+      { category: "Today", lines: [
+        "Add the team Submit password gate to Mom's Shopping Quiz and Mom's Amex Offers, then publish.",
+        "Watch for the Capital One Ray-Ban bonus points; Mom's next recording reminder is Oct 16." ] },
+      { category: "Waiting On Max", lines: [
+        "New card: your priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business).",
+        "Points inventory: your airline and hotel balances, sent privately." ] },
+      { category: "Freeze", lines: [
+        "Holding all overnight submissions until you clean up; no changes from them." ] }
     ]
   },
   // Urgent and warning items: shown as ONE collapsed line ("1 Urgent · 2 Warnings") that expands on tap/Enter.
@@ -21,8 +22,8 @@ window.DASH = {
   alerts: [],
   agent: "Miles Agent",
   role: "Head Of All Credit Card Points Projects",
-  updated: "Oct 13, 2026, 11:40 PM ICT",
-  status: "Mom's Amex Offers refreshed from the Oct 12 Dropbox recording. Still waiting on Max for card priorities and points balances.",
+  updated: "Oct 14, 2026, 4:55 AM ICT",
+  status: "Today: Submit password gate on both of Mom's apps. Still waiting on Max for card priorities and points balances.",
   apps: [
     { name: "Mom's Amex Offers", url: "https://webermanapps.github.io/janes-amex-offers/", note: "Current Amex Offers, easy to scan" },
     { name: "Mom's Shopping Quiz", url: "https://webermanapps.github.io/amex-brand-swipe/", note: "Swipe through brands to set preferences" },
@@ -33,9 +34,12 @@ window.DASH = {
     { pri: "P1", title: "Get A New Credit Card", detail: "Waiting on Max's priorities: travel perks, cash back, sign-up bonus, or no annual fee; personal or business card. Handed over from Portfolio on Oct 13.", state: "Waiting On Max" },
     { pri: "", title: "Points Balances Inventory", detail: "Airline and hotel programs, from Portfolio.", state: "Waiting On Max" },
     { pri: "", title: "Mom's Offers Refresh", detail: "Done Oct 13 from the Oct 12 screen recording (102 offers).", state: "Done" },
+    { pri: "", title: "Submit Password On Mom's Apps", detail: "Route both apps' Submit through the team password gate (rule Oct 14, 00:02).", state: "Today" },
     { pri: "", title: "Capital One Ray-Ban Bonus", detail: "Watching for the 1,500 bonus points to post.", state: "Watching" }
   ],
   decisions: [
+    "Your new-card priorities: travel perks, cash back, sign-up bonus or no annual fee; personal or business?",
+    "Your points balances for the inventory (send privately, not for the dashboard)?",
     "Switch Mom's apps to the private Submit receiver (ready and tested)?",
     "Bring both of Mom's apps up to the newest brand rules?",
     "Rename the janes-amex-offers repo? This breaks the old link."
