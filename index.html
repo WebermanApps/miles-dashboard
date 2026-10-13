@@ -81,6 +81,44 @@ ol.siderule li{border-left:3px solid #B8742A;padding:6px 0 6px 12px;margin:0 0 1
 @media(min-width:1280px){.grid .recent{grid-column:span 2}}
 .appsTop{max-width:1100px;margin:0 auto;padding:14px 18px}
 @media(min-width:1280px) and (max-width:1699px){.appsTop{max-width:1300px}}@media(min-width:1700px){.appsTop{max-width:1500px}}@media(min-width:1900px){.appsTop{padding-left:5vw;padding-right:5vw}}@media(min-width:2400px){.appsTop{max-width:1900px}}@media(min-width:3200px){.appsTop{max-width:2600px}}
+
+/* Layout deck round 1 (Max, Oct 13 23:34) */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--mw-border);backdrop-filter:saturate(1.2) blur(6px)}
+.topbar .tb{max-width:1100px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:12px;min-height:48px}
+.topbar .homelink{display:inline-flex;align-items:center;gap:6px;min-height:44px;min-width:44px;color:#1F7A7A;text-decoration:none;font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.16em}
+.topbar .homelink:hover{text-decoration:underline}
+.tbname{font-family:var(--mw-font-heading);font-weight:700;font-size:1.1rem}
+.tbupd{margin-left:auto;color:var(--mw-muted-text);font-size:.8rem;text-align:right}
+.wrap{padding-top:16px}h1{margin-top:2px}.role{margin:2px 0 10px}
+.grid{gap:12px;margin-top:12px}section.card{padding:.9rem 1rem}h2{margin-bottom:8px}
+.appsc{margin-bottom:12px}.apps{gap:8px}
+.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rep,.owed{background:#fff;border:1px solid var(--mw-border);border-radius:12px;margin:0 0 10px}
+.rep>summary,.owed>summary{cursor:pointer;min-height:48px;display:flex;align-items:center;gap:10px;padding:6px 14px;list-style:none;font-weight:600}
+.rep>summary::-webkit-details-marker,.owed>summary::-webkit-details-marker{display:none}
+.rep>summary:before,.owed>summary:before{content:"";flex:none;width:8px;height:8px;border-right:2px solid #737373;border-bottom:2px solid #737373;transform:rotate(-45deg);transition:transform var(--mw-dur)}
+.rep[open]>summary:before,.owed[open]>summary:before{transform:rotate(45deg)}
+.rep{border-top:3px solid #B8742A}
+.rt{font-family:var(--mw-font-heading);font-size:1.25rem;flex:none}
+.rsum{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:400;color:#404040}
+.rep .uts{flex:none;color:var(--mw-muted-text);font-weight:400;font-size:.8rem}
+@media(max-width:600px){.rep .uts{display:none}}
+.rep .ulines{padding:0 12px 12px}
+.owed .obody{padding:0 14px 12px}.owed ul,.owed ol{margin:0;padding:0;list-style:none}.owed li{padding:7px 0;border-top:1px solid var(--mw-border)}
+.lv.dq{color:#1F7A7A}
+ul.rows{display:grid;gap:8px}@media(min-width:900px){#open.rows{grid-template-columns:1fr 1fr}}
+li.edge{border:1px solid var(--mw-border);border-left:4px solid #B8742A;background:#fff}
+li.edge.e-watch{border-left-color:#1F7A7A}li.edge.e-prog{border-left-color:#525252}
+li.edge summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 12px}
+li.edge summary::-webkit-details-marker{display:none}li.edge .t{font-weight:600}
+li.edge .d{padding:0 12px 10px;color:var(--mw-muted-text);font-size:.94rem}
+li.rrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-top:1px solid var(--mw-border)}li.rrow:first-child{border-top:0}
+li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--mw-muted-text);font-family:var(--mw-font-heading);min-width:0}
+.seeall{margin-top:8px;min-height:44px;padding:0 14px;border:1px solid var(--mw-border);border-radius:999px;background:#fff;font:600 .8rem var(--mw-font-body);text-transform:uppercase;letter-spacing:.1em;cursor:pointer}
+.seeall:hover{border-color:#171717}
+.share{margin:22px 0 6px}footer{margin-top:10px}
+@media(min-width:1280px) and (max-width:1699px){.topbar .tb{max-width:1300px}}@media(min-width:1700px){.topbar .tb{max-width:1500px}}@media(min-width:1900px){.topbar .tb{padding:0 5vw}}@media(min-width:2400px){.topbar .tb{max-width:1900px}}@media(min-width:3200px){.topbar .tb{max-width:2600px}}
+@media(min-width:1280px){.grid{grid-template-columns:1fr 1fr}.grid .recent{grid-column:auto}}
 </style><script src="ptr.js" defer></script>
 </head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -92,19 +130,18 @@ ol.siderule li{border-left:3px solid #B8742A;padding:6px 0 6px 12px;margin:0 0 1
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
 </defs></svg>
-<nav class="topnav"><div class="tn"><a class="homelink" href="https://webermanapps.github.io/a-2sipntzsp385oxy3/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a></div></nav>
-<div class="appsTop"><section class="card"><h2><svg class="ic"><use href="#i-grid"/></svg>Apps</h2><div class="apps" id="apps"></div></section></div>
-<div class="ubar" id="ubar"><div class="ubin"><div class="uhead"><span class="utitle" id="utitle"></span><span class="uts" id="uts"></span></div><div class="ulines" id="ulines"></div></div></div>
+<header class="topbar"><div class="tb"><a class="homelink" href="https://webermanapps.github.io/a-2sipntzsp385oxy3/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a><span class="tbname">Miles Agent</span><span class="tbupd">Updated <span id="tupd"></span></span></div></header>
 <div class="wrap">
 <div class="wm">Max Weberman · Command Center</div>
 <h1 id="agent"></h1><div class="role" id="role"></div>
-<details class="alerts" id="alerts" hidden><summary id="asum"></summary><ul id="alist"></ul></details>
-<div class="status"><div class="lbl">Current Status · Updated <span id="upd"></span></div><div id="status"></div></div>
+<section class="card appsc"><h2><svg class="ic"><use href="#i-grid"/></svg>Apps</h2><div class="apps" id="apps"></div></section>
+<details class="rep" id="rep" hidden><summary><span class="rt" id="utitle"></span><span class="rsum" id="rsum"></span><span class="uts" id="uts"></span></summary><div class="ulines" id="ulines"></div></details>
+<details class="owed" id="owed"><summary id="osum"></summary><div class="obody"><ul id="alist"></ul><ol id="dec" class="siderule"></ol></div></details>
+<div class="status"><div class="lbl">Current Status</div><div id="status"></div></div>
 <div class="grid">
-<section class="card span"><h2><svg class="ic"><use href="#i-list"/></svg>Open Items</h2><ul id="open" class="two"></ul></section>
-<section class="card dcard"><h2 class="band"><svg class="ic"><use href="#i-q"/></svg>Waiting On Max</h2><ol id="dec" class="siderule"></ol>
-<h2 style="margin-top:22px"><svg class="ic"><use href="#i-clock"/></svg>Routines</h2><ul id="rout"></ul></section>
-<section class="card span recent"><h2><svg class="ic"><use href="#i-check"/></svg>Recent Work</h2><ul id="recent"></ul></section>
+<section class="card span"><h2><svg class="ic"><use href="#i-list"/></svg>Open Items</h2><ul id="open" class="rows"></ul></section>
+<section class="card"><h2><svg class="ic"><use href="#i-clock"/></svg>Routines</h2><ul id="rout" class="rows"></ul></section>
+<section class="card recent"><h2><svg class="ic"><use href="#i-check"/></svg>Recent Work</h2><ul id="recent" class="rows"></ul><button class="seeall" id="seeall" hidden></button></section>
 </div>
 <div class="share"><button class="btn mw-hover" id="share"><svg class="ic"><use href="#i-share"/></svg>Share</button></div>
 <footer>Built by <a class="mw-hover" href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></footer>
@@ -112,16 +149,23 @@ ol.siderule li{border-left:3px solid #B8742A;padding:6px 0 6px 12px;margin:0 0 1
 <script src="data.js"></script>
 <script>
 const D=window.DASH,$=id=>document.getElementById(id),e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const R=D.report;if(R&&R.lines&&R.lines.length){$('utitle').textContent=R.title||'Update';$('uts').textContent=R.timestamp||'';
-$('ulines').innerHTML=R.lines.map((g,gi)=>{if(typeof g==='string')g={category:'',lines:[g]};const rows=(g.lines||[]).map(l=>`<li>${e(l)}</li>`).join('');return g.category?`<details class="ufold"${gi===0?' open':''}><summary>${e(g.category)}<span class="ucount">${(g.lines||[]).length}</span></summary><ol class="unum">${rows}</ol></details>`:`<ol class="unum">${rows}</ol>`}).join('')}else $('ubar').style.display='none';
-{const A=D.alerts||[];if(A.length){const u=A.filter(a=>a.level==='urgent').length,w=A.length-u;$('asum').textContent=[u?u+' Urgent':'',w?w+(w>1?' Warnings':' Warning'):''].filter(Boolean).join(' · ');
-$('alist').innerHTML=A.map(a=>`<li><span class="lv ${a.level==='urgent'?'urgent':'warning'}">${a.level==='urgent'?'Urgent':'Warning'}</span>${e(a.text)}</li>`).join('');$('alerts').hidden=false}}
-$('agent').textContent=D.agent;$('role').textContent=D.role;$('upd').textContent=D.updated;$('status').textContent=D.status;
-$('apps').innerHTML=D.apps.map(a=>`<a class="app mw-hover" href="${e(a.url)}" target="_blank" rel="noopener"><div><b>${e(a.name)}</b><span>${e(a.note||'')}</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>`).join('');
-$('open').innerHTML=D.openItems.map(i=>`<li class="item edge ${/watch/i.test(i.state)?'e-watch':/max/i.test(i.state)?'e-max':'e-prog'}"><div class="row"><div class="t">${i.pri?`<span class="pill p1">${e(i.pri)}</span>`:''}${e(i.title)}</div><span class="pill">${e(i.state)}</span></div><div class="d">${e(i.detail)}</div></li>`).join('');
-$('dec').innerHTML=D.decisions.map(d=>`<li>${e(d)}</li>`).join('');
-$('rout').innerHTML=D.routines.map(r=>`<li class="item"><div class="t">${e(r.name)}</div><div class="d">${e(r.when)}</div></li>`).join('');
-$('recent').innerHTML=D.recent.map(r=>`<li class="item r"><span class="date">${e(r.date)}</span>${e(r.text)}</li>`).join('');
+$('agent').textContent=D.agent;$('role').textContent=D.role;$('tupd').textContent=D.updated;$('status').textContent=D.status;document.title=D.agent+' · Command Center';
+const R=D.report;if(R&&R.lines&&R.lines.length){const G=R.lines.map(g=>typeof g==='string'?{category:'',lines:[g]}:g),n=G.reduce((a,g)=>a+(g.lines||[]).length,0);
+ $('utitle').textContent=R.title||'Update';$('uts').textContent=R.timestamp||'';$('rsum').textContent=n+(n===1?' item':' items')+(G[0].lines&&G[0].lines[0]?' · '+G[0].lines[0]:'');
+ $('ulines').innerHTML=G.map((g,gi)=>{const rows=(g.lines||[]).map(l=>`<li>${e(l)}</li>`).join('');return g.category?`<details class="ufold"${gi===0?' open':''}><summary>${e(g.category)}<span class="ucount">${(g.lines||[]).length}</span></summary><ol class="unum">${rows}</ol></details>`:`<ol class="unum">${rows}</ol>`}).join('');$('rep').hidden=false}
+{const A=D.alerts||[],Q=D.decisions||[],u=A.filter(a=>a.level==='urgent').length,w=A.length-u;
+ const parts=[u?u+' Urgent':'',w?w+(w>1?' Warnings':' Warning'):'',Q.length?Q.length+(Q.length>1?' Decisions Owed':' Decision Owed'):''].filter(Boolean);
+ if(parts.length){$('osum').textContent=parts.join(' · ');
+  $('alist').innerHTML=A.map(a=>`<li><span class="lv ${a.level==='urgent'?'urgent':'warning'}">${a.level==='urgent'?'Urgent':'Warning'}</span>${e(a.text)}</li>`).join('');
+  $('dec').innerHTML=Q.map(d=>`<li><span class="lv dq">Decision</span>${e(d)}</li>`).join('')}else $('owed').hidden=true}
+$('apps').innerHTML=D.apps.map(a=>`<a class="app mw-hover" href="${e(a.url)}" target="_blank" rel="noopener"><div><b>${e(a.name)}</b><span class="clamp">${e(a.note||'')}</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>`).join('');
+const edge=st=>/watch/i.test(st)?'e-watch':/max/i.test(st)?'e-max':'e-prog';
+$('open').innerHTML=D.openItems.map(i=>`<li class="edge ${edge(i.state)}"><details><summary><span class="t">${i.pri?`<span class="pill p1">${e(i.pri)}</span>`:''}${e(i.title)}</span><span class="pill">${e(i.state)}</span></summary><div class="d">${e(i.detail)}</div></details></li>`).join('');
+$('rout').innerHTML=D.routines.map(r=>`<li class="rrow"><span class="t">${e(r.name)}</span><span class="date">${e(r.when)}</span></li>`).join('');
+const REC=D.recent||[],MAX=5;let all=false;
+function drawRecent(){$('recent').innerHTML=(all?REC:REC.slice(0,MAX)).map(r=>`<li class="rrow"><span class="t">${e(r.text)}</span><span class="date">${e(r.date)}</span></li>`).join('');
+ const b=$('seeall');b.hidden=REC.length<=MAX;b.textContent=all?'Show Less':'See All '+REC.length;b.setAttribute('aria-expanded',all)}
+$('seeall').onclick=()=>{all=!all;drawRecent()};drawRecent();
 $('share').onclick=async()=>{const u=location.href;try{if(navigator.share){await navigator.share({title:document.title,url:u});return}}catch(x){return}
 try{await navigator.clipboard.writeText(u)}catch(x){}const t=$('toast');t.style.display='block';setTimeout(()=>t.style.display='none',1600)};
 </script></body></html>

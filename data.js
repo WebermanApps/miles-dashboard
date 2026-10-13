@@ -23,8 +23,8 @@ window.DASH = {
   ],
   agent: "Miles Agent",
   role: "Head Of All Credit Card Points Projects",
-  updated: "Oct 13, 2026, 7:21 PM ICT",
-  status: "Took over new-card and points work from Portfolio today. Waiting on Max for points balances and a new offers screen recording.",
+  updated: "Oct 13, 2026, 11:45 PM ICT",
+  status: "Running the new-card and points work handed over from Portfolio. Waiting on Max for his card priorities, his points balances and a new offers screen recording.",
   apps: [
     { name: "Mom's Amex Offers", url: "https://webermanapps.github.io/janes-amex-offers/", note: "Current Amex Offers, easy to scan" },
     { name: "Mom's Shopping Quiz", url: "https://webermanapps.github.io/amex-brand-swipe/", note: "Swipe through brands to set preferences" },
@@ -48,6 +48,7 @@ window.DASH = {
     { name: "Mom's Recording Upload Reminder", when: "Every 3 days, next Oct 14" }
   ],
   recent: [
+    { date: "Oct 13", text: "Dashboard layout picks applied: shared top bar, one-line report, decisions dropdown, compact rows" },
     { date: "Oct 13", text: "Back links and pull-down-to-refresh on all three pages" },
     { date: "Oct 13", text: "Added one-tap Submit to both of Mom's apps; picks now come straight to Miles" },
     { date: "Oct 13", text: "Launched this dashboard; took over the new-card task and points inventory" },
