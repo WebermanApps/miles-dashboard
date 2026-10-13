@@ -20,7 +20,7 @@ section.card{background:#fff;border:1px solid var(--mw-border);border-radius:14p
 a.app{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:4rem;padding:.9rem 1rem;border:1px solid var(--mw-border);border-radius:12px;text-decoration:none;color:inherit;background:#fff}
 a.app b{font-family:var(--mw-font-heading);font-size:1.25rem;display:block}a.app span{color:var(--mw-muted-text);font-size:.92rem}
 a.app svg{flex:none;transition:transform var(--mw-dur) var(--mw-ease)}a.app:hover svg{transform:translateX(3px)}
-ul{list-style:none;margin:0;padding:0}li.item{padding:12px 0;border-top:1px solid var(--mw-border)}li.item:first-child{border-top:0;padding-top:0}
+ul{list-style:none;margin:0;padding:0}li.item.r{display:flex;gap:.6em}li.item{padding:12px 0;border-top:1px solid var(--mw-border)}li.item:first-child{border-top:0;padding-top:0}
 .row{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
 .t{font-weight:600}.d{color:var(--mw-muted-text);font-size:.94rem}
 .pill{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--mw-border);border-radius:999px;padding:2px 9px;white-space:nowrap;color:#525252}
@@ -40,9 +40,11 @@ footer a{color:var(--mw-foreground);text-decoration:none;border-bottom:1px solid
 .utitle{font-family:var(--mw-font-heading);font-weight:700;font-size:1.3rem}.uts{color:var(--mw-muted-text);font-size:.85rem}
 .ulines{display:grid;gap:8px}@media(min-width:760px){.ulines{grid-template-columns:repeat(2,1fr)}}
 .ug{font-size:.95rem}.ug .lbl{display:block}.ug p{margin:0}
-@media(min-width:1700px){html{font-size:18px}.wrap,.ubin{max-width:1500px}.grid{grid-template-columns:repeat(3,1fr)}.ulines{grid-template-columns:repeat(4,1fr)}.grid .recent{grid-column:auto}}
-@media(min-width:2400px){html{font-size:22px}.wrap,.ubin{max-width:1900px}}
-@media(min-width:3200px){html{font-size:30px}.wrap,.ubin{max-width:2600px}}
+@media(min-width:1700px){html{font-size:18px}.wrap,.ubin{max-width:1500px}.grid{grid-template-columns:repeat(3,1fr)}.ulines{grid-template-columns:repeat(auto-fit,minmax(14em,1fr))}.grid .recent{grid-column:auto}}
+@media(min-width:1900px){html{font-size:21px}}@media(min-width:2400px){html{font-size:24px}.wrap,.ubin{max-width:1900px}}
+@media(min-width:3200px){html{font-size:36px}.wrap,.ubin{max-width:2600px}}
+a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3px}
+@media(min-width:1900px){.wrap,.ubin{padding-left:5vw;padding-right:5vw}.wrap{padding-top:5vh}footer{padding-bottom:5vh}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
@@ -78,7 +80,7 @@ $('apps').innerHTML=D.apps.map(a=>`<a class="app mw-hover" href="${e(a.url)}" ta
 $('open').innerHTML=D.openItems.map(i=>`<li class="item"><div class="row"><div class="t">${i.pri?`<span class="pill p1">${e(i.pri)}</span>`:''}${e(i.title)}</div><span class="pill">${e(i.state)}</span></div><div class="d">${e(i.detail)}</div></li>`).join('');
 $('dec').innerHTML=D.decisions.map(d=>`<li>${e(d)}</li>`).join('');
 $('rout').innerHTML=D.routines.map(r=>`<li class="item"><div class="t">${e(r.name)}</div><div class="d">${e(r.when)}</div></li>`).join('');
-$('recent').innerHTML=D.recent.map(r=>`<li class="item"><span class="date">${e(r.date)}</span>${e(r.text)}</li>`).join('');
+$('recent').innerHTML=D.recent.map(r=>`<li class="item r"><span class="date">${e(r.date)}</span>${e(r.text)}</li>`).join('');
 $('share').onclick=async()=>{const u=location.href;try{if(navigator.share){await navigator.share({title:document.title,url:u});return}}catch(x){return}
 try{await navigator.clipboard.writeText(u)}catch(x){}const t=$('toast');t.style.display='block';setTimeout(()=>t.style.display='none',1600)};
 </script></body></html>
