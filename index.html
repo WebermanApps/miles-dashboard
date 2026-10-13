@@ -51,6 +51,9 @@ a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3p
 .alerts summary::-webkit-details-marker{display:none}.alerts summary:before{content:"";width:8px;height:8px;border-right:2px solid #737373;border-bottom:2px solid #737373;transform:rotate(-45deg);transition:transform var(--mw-dur)}
 .alerts[open] summary:before{transform:rotate(45deg)}.alerts ul{padding:0 14px 12px}.alerts li{padding:6px 0;border-top:1px solid var(--mw-border)}
 .lv{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-right:8px;font-weight:600}.lv.urgent{color:#b42318}.lv.warning{color:#8a5418}
+.topnav{background:#fff;border-bottom:1px solid var(--mw-border)}.topnav .tn{max-width:1100px;margin:0 auto;padding:0 18px}.topnav .homelink{display:inline-flex;align-items:center;gap:6px;min-height:44px;min-width:44px;color:var(--mw-foreground);text-decoration:none;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:var(--mw-tracking-label)}
+.topnav .homelink:hover{text-decoration:underline}
+@media(min-width:1280px) and (max-width:1699px){.topnav .tn{max-width:1300px}}@media(min-width:1700px){.topnav .tn{max-width:1500px}}@media(min-width:1900px){.topnav .tn{padding:0 5vw}}@media(min-width:2400px){.topnav .tn{max-width:1900px}}@media(min-width:3200px){.topnav .tn{max-width:2600px}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
@@ -61,6 +64,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #B8742A;outline-offset:3p
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
 </defs></svg>
+<nav class="topnav"><div class="tn"><a class="homelink" href="https://webermanapps.github.io/a-2sipntzsp385oxy3/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a></div></nav>
 <div class="ubar" id="ubar"><div class="ubin"><div class="uhead"><span class="utitle" id="utitle"></span><span class="uts" id="uts"></span></div><div class="ulines" id="ulines"></div></div></div>
 <div class="wrap">
 <div class="wm">Max Weberman · Command Center</div>
