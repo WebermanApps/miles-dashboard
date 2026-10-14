@@ -1,4 +1,33 @@
-{"updated":"2026-10-14 14:20 ICT","routines":[
- {"name":"Morning Report","group":"Reports","schedule_plain":"Daily At 4:47 AM ICT","status":"on","last_run":"Today 4:55 AM"},
- {"name":"Evening Report","group":"Reports","schedule_plain":"Daily At 6:03 PM ICT","status":"on","last_run":"Oct 13, 6:04 PM"},
- {"name":"Mom's Amex Offers Reminder","group":"Mom's Apps","schedule_plain":"Every 3 Days","status":"on","last_run":"Oct 13, 11:33 PM"}]}
+{
+ "updated": "2026-10-14 20:10 ICT",
+ "routines": [
+  {
+   "name": "Morning Report",
+   "group": "Reports",
+   "schedule_plain": "Daily At 4:47 AM ICT (Due By 5:00)",
+   "status": "on",
+   "last_run": "Today 4:55 AM"
+  },
+  {
+   "name": "Evening Report",
+   "group": "Reports",
+   "schedule_plain": "Daily At 6:03 PM ICT",
+   "status": "paused",
+   "last_run": "Today 6:12 PM"
+  },
+  {
+   "name": "Deck Submissions & Shelf Refill",
+   "group": "Decks",
+   "schedule_plain": "Daily At 6:23 PM ICT",
+   "status": "on",
+   "last_run": "Never Run"
+  },
+  {
+   "name": "Mom's Amex Offers Reminder",
+   "group": "Mom's Apps",
+   "schedule_plain": "Every 3 Days",
+   "status": "on",
+   "last_run": "Oct 13, 11:33 PM"
+  }
+ ]
+}

@@ -126,6 +126,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 .dlist{display:flex;flex-wrap:wrap;gap:8px}
 .dk{display:inline-flex;flex-direction:column;justify-content:center;min-height:44px;padding:4px 14px;border:1px solid var(--mw-border);border-radius:999px;color:var(--mw-foreground);text-decoration:none;font-weight:600;font-size:.92rem;line-height:1.2}.dk small{font-weight:400;font-size:.72rem;color:var(--mw-muted-text)}
 .pts{margin-bottom:12px}.ptl{display:grid;gap:8px;grid-template-columns:1fr}@media(min-width:760px){.ptl{grid-template-columns:repeat(3,1fr)}}.pt{min-height:44px;padding:8px 12px;border:1px solid var(--mw-border);border-left:4px solid #B8862B;border-radius:10px;display:flex;flex-direction:column;justify-content:center}.pt b{font-weight:600}.pt small{color:var(--mw-muted-text);font-size:.78rem}
+.swc{display:inline-flex;align-items:baseline;gap:6px;margin:4px 0 6px;padding:4px 12px;background:#fff;border:1px solid var(--mw-border);border-radius:999px;font-size:.9rem;color:var(--mw-muted-text)}.swc b{font-family:Khand,sans-serif;font-size:1.2rem;color:var(--mw-foreground)}.routbot{margin-top:16px}
 </style><script src="ptr.js" defer></script>
 <link rel="stylesheet" href="https://webermanapps.github.io/style-swipe/kit/routines-section.css?v=2">
 <link rel="stylesheet" href="https://webermanapps.github.io/style-swipe/kit/deck-shelf.css?v=2">
@@ -141,7 +142,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 </defs></svg>
 <header class="topbar"><div class="tb"><a class="homelink" href="https://webermanapps.github.io/a-o956qercs5ubd57y/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a><span class="tbname">Miles Agent</span><span class="tbupd"><span class="full">Updated <span id="tupd"></span></span><span class="short" id="tupds"></span></span><button class="tbshare" id="share" aria-label="Share"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-share"/></svg></button></div></header>
 <div class="wrap">
-<section data-shelf="shelf.json"></section><script src="https://webermanapps.github.io/style-swipe/submit.js" defer></script><script src="https://webermanapps.github.io/style-swipe/kit/deck-shelf.js?v=2" defer></script>
+<div class="swc" aria-label="Swipes completed"><b id="swn">0</b> Swipes Completed</div><section data-shelf="shelf.json"></section><script src="https://webermanapps.github.io/style-swipe/submit.js" defer></script><script src="https://webermanapps.github.io/style-swipe/kit/deck-shelf.js?v=2" defer></script>
 
 <div class="wm">Max Weberman · Command Center</div>
 <h1 id="agent"></h1><div class="role" id="role"></div>
@@ -152,10 +153,11 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 <div class="status"><div class="lbl">Current Status</div><div id="status"></div></div>
 <div class="grid">
 <section class="card span"><h2><svg class="ic"><use href="#i-list"/></svg>Open Items</h2><ul id="open" class="rows"></ul></section>
-<section data-routines="routines.json" id="routines"></section><script src="https://webermanapps.github.io/style-swipe/kit/routines-section.js?v=2" defer></script>
 <section class="card recent"><h2><svg class="ic"><use href="#i-check"/></svg>Recent Work</h2><ul id="recent" class="rows"></ul><button class="seeall" id="seeall" hidden></button></section>
 </div>
 
+<div class="routbot"><section data-routines="routines.json" id="routines"></section><script src="https://webermanapps.github.io/style-swipe/kit/routines-section.js?v=2" defer></script>
+</div>
 <footer>Built by <a class="mw-hover" href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></footer>
 </div><div id="toast">Link copied</div>
 <script src="data.js"></script>
@@ -171,6 +173,7 @@ const R=D.report;if(R&&R.lines&&R.lines.length){const G=R.lines.map(g=>typeof g=
   $('alist').innerHTML=A.map(a=>`<li><span class="lv ${a.level==='urgent'?'urgent':'warning'}">${a.level==='urgent'?'Urgent':'Warning'}</span>${e(a.text)}</li>`).join('');
   $('dec').innerHTML=Q.map(d=>`<li><span class="lv dq">Decision</span>${e(d)}</li>`).join('')}else $('owed').hidden=true}
 {const K=[];if(K.length){$('dlist').innerHTML=K.map(k=>`<a class="dk mw-hover" href="${e(k.url)}">${e(k.name)}<small>${e(k.note||'')}</small></a>`).join('');$('decks').hidden=false}}
+$('swn').textContent=String(D.swipesCompleted||0);
 $('apps').innerHTML=D.apps.map(a=>`<a class="app mw-hover" href="${e(a.url)}" target="_blank" rel="noopener"><div><b>${e(a.name)}</b><span class="clamp">${e(a.note||'')}</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>`).join('');
 const edge=st=>/watch/i.test(st)?'e-watch':/max/i.test(st)?'e-max':'e-prog';
 $('open').innerHTML=D.openItems.map(i=>`<li class="edge ${edge(i.state)}"><details><summary><span class="t">${i.pri?`<span class="pill p1">${e(i.pri)}</span>`:''}${e(i.title)}</span><span class="pill">${e(i.state)}</span></summary><div class="d">${e(i.detail)}</div></details></li>`).join('');

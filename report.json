@@ -1,39 +1,8 @@
 {
   "agent": "Miles Agent",
-  "type": "Evening Report",
-  "postedAt": "Oct 14, 2026 · 18:12 ICT",
-  "postedAtISO": "2026-10-14T18:12:48+07:00",
-  "lines": [
-    {
-      "category": "Today",
-      "lines": [
-        "Submit password gate went live on Mom's Shopping Quiz and Mom's Amex Offers.",
-        "Dashboard: pinned decks, Points Balances Strip (program names only), Routines section, Open a New Deck launcher with the 20-card Cards, Points & Travel deck, Share icon in the header.",
-        "Your New Card Pick layout picks are saved (fold-out sections and picture-on-top cards); Mom's Ends Soon side menu waits for your OK."
-      ]
-    },
-    {
-      "category": "Waiting On Max",
-      "lines": [
-        "New card: your priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business).",
-        "Points inventory: your airline and hotel balances, sent privately."
-      ]
-    },
-    {
-      "category": "Tomorrow",
-      "lines": [
-        "Morning Report by 5:00, then apply any Cards, Points & Travel deck answers.",
-        "Still watching for the Ray-Ban bonus points; Mom's next recording reminder is Oct 16."
-      ]
-    }
-  ],
-  "report_type": "Evening Report",
-  "posted_at": "2026-10-14T18:12:48+07:00",
-  "due_by": "18:00 ICT",
-  "late": true,
-  "late_min": 12,
-  "next": {
-    "report_type": "Morning Report",
-    "due_at": "by 5:00 AM ICT"
-  }
+  "type": "Morning Report",
+  "dueBy": "05:00 ICT",
+  "postedAt": "Oct 14, 2026 \u00b7 20:10 ICT",
+  "postedAtISO": "2026-10-14T20:10:00+07:00",
+  "note": "Morning Report only; Evening Report retired Oct 14."
 }

@@ -1,22 +1,22 @@
 // Miles Agent dashboard content. Edit this file only, then commit and push.
 // PUBLIC SITE: no account numbers, balances, or other sensitive figures.
 window.DASH = {
-  // Update bar (also mirror type + post time into report.json): routines replace this (Morning Report 4:47 ICT, Evening Report 18:03 ICT).
+  // Update bar (also mirror type + post time into report.json): the Morning Report routine (4:47 ICT, due by 5:00) replaces this. Morning Report only.
   // lines can be plain strings, or groups: { category: "...", lines: ["..."] }
   report: {
-    title: "Evening Report",
-    timestamp: "Oct 14, 2026 · 18:12 ICT",
+    title: "Morning Report",
+    timestamp: "Oct 14, 2026 · 20:10 ICT",
     lines: [
-      { category: "Today", lines: [
-        "Submit password gate went live on Mom's Shopping Quiz and Mom's Amex Offers.",
-        "Dashboard: pinned decks, Points Balances Strip (program names only), Routines section, Open a New Deck launcher with the 20-card Cards, Points & Travel deck, Share icon in the header.",
-        "Your New Card Pick layout picks are saved (fold-out sections and picture-on-top cards); Mom's Ends Soon side menu waits for your OK." ] },
+      { category: "Ready Now", lines: [
+        "Five decks at the top: Miles Dashboard Style and Mom's Amex Offers Style to finish, plus New Card Priorities, Points & Redemptions and Travel Goals (20 cards each).",
+        "Points Balances Strip lists Venture X, Aeroplan and ANA, with no numbers." ] },
       { category: "Waiting On Max", lines: [
-        "New card: your priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business).",
-        "Points inventory: your airline and hotel balances, sent privately." ] },
-      { category: "Tomorrow", lines: [
-        "Morning Report by 5:00, then apply any Cards, Points & Travel deck answers.",
-        "Still watching for the Ray-Ban bonus points; Mom's next recording reminder is Oct 16." ] }
+        "New card: your priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business). The New Card Priorities deck covers this.",
+        "Points inventory: your airline and hotel balances, sent privately.",
+        "Switching Mom's apps to the private Submit: ready, waiting on your OK." ] },
+      { category: "Watching", lines: [
+        "Ray-Ban bonus points have not posted yet.",
+        "Mom's next offers recording reminder is Oct 16." ] }
     ]
   },
   // Urgent and warning items: shown as ONE collapsed line ("1 Urgent · 2 Warnings") that expands on tap/Enter.
@@ -24,9 +24,11 @@ window.DASH = {
   alerts: [],
   agent: "Miles Agent",
   role: "Head Of All Credit Card Points Projects",
-  updated: "Oct 14, 2026, 6:12 PM ICT",
-  status: "Submit password gate is live on both of Mom's apps and the dashboard has its deck launcher and Routines. Still waiting on Max for card priorities and points balances.",
+  updated: "Oct 14, 2026, 8:10 PM ICT",
+  status: "Five decks are ready at the top. Still waiting on Max for card priorities and points balances.",
   // Decks Waiting On You (R63): unfinished decks, pinned at the very top. Remove a deck once Max submits it. Empty = row hidden.
+  // Swipes completed (19:51 rule): cards answered in real submissions via pull.sh miles, tests excluded.
+  swipesCompleted: 0,
   decksWaiting: [],
   apps: [
     { name: "Mom's Amex Offers", url: "https://webermanapps.github.io/janes-amex-offers/", note: "Current Amex Offers, easy to scan" },
@@ -49,7 +51,6 @@ window.DASH = {
   ],
   routines: [
     { name: "Morning Report", when: "Daily, 4:47 ICT" },
-    { name: "Evening Report", when: "Daily, 18:03 ICT" },
     { name: "Mom's Recording Upload Reminder", when: "Every 3 days, next Oct 16" }
   ],
   recent: [
