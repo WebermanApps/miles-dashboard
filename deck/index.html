@@ -38,5 +38,12 @@ function draw(){if(!D.cards.length)return;const c=D.cards[i];document.getElement
  document.getElementById('skip').onclick=()=>{if(!st.a[c.id])st.s[c.id]=1;save();go(1)}}
 function go(d){i=(i+d+D.cards.length)%D.cards.length;st.i=i;save();draw()}
 fetch(ID+'.json?v='+Date.now()).then(r=>r.json()).then(j=>{D=j;st.done=st.done||{};D.cards=D.cards.filter(c=>!st.done[c.id]);if(!D.cards.length){document.getElementById('card').innerHTML='<div class="card"><h2>All Done</h2><p>Every card is answered. A fresh deck will be ready on the dashboard.</p></div>';}document.getElementById('title').textContent=D.name;i=Math.min(st.i||0,D.cards.length-1);draw();
- MWSubmit.button(document.getElementById('submitBox'),{agent:'miles',app:'miles-deck',deck:ID+(P.has('test')?'-test':''),getResults:()=>{const r=results();D.cards.forEach(c=>{if(st.a[c.id]||st.n[c.id])st.done[c.id]=1});save();return r},getNotes:()=>Object.entries(st.n).map(([k,v])=>k+': '+v).join('\n')})});
+ const sb=document.getElementById('submitBox');sb.innerHTML='<button id="sub" style="width:100%;min-height:52px;background:#1F7A7A;color:#fff;border:0;font:700 1.15rem Khand,sans-serif;letter-spacing:.08em;text-transform:uppercase">Submit</button><div id="sst" role="status" aria-live="polite" style="margin-top:6px;color:#555"></div>';
+ const btn=document.getElementById('sub'),ss=document.getElementById('sst');
+ btn.onclick=async()=>{const r=results();btn.disabled=true;ss.textContent='Sending';let ok=false;
+  try{ok=await MWSubmit.send({agent:'miles',app:'miles-deck',deck:ID+(P.has('test')?'-test':''),results:r,notes:Object.entries(st.n).map(([k,v])=>k+': '+v).join('\n'),partial:r.unanswered.length>0,answered:r.answered,total:r.total,unanswered:r.unanswered,test:r.test})}catch(e){ok=false}
+  btn.disabled=false;
+  if(ok===true){D.cards.forEach(c=>{if(st.a[c.id]||st.n[c.id])st.done[c.id]=1});save();ss.textContent='Sent';D.cards=D.cards.filter(c=>!st.done[c.id]);i=0;D.cards.length?draw():document.getElementById('card').innerHTML='<div class="card"><h2>All Done</h2><p>A fresh deck will be ready on the dashboard.</p></div>'}
+  else ss.textContent=MWSubmit.blocked?'Not sent: password needed. Your answers are kept.':'Not sent yet. Your answers are kept and will retry.'};
+});
 </script></body></html>
