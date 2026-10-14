@@ -1,0 +1,4 @@
+{"updated":"2026-10-14 14:20 ICT","routines":[
+ {"name":"Morning Report","group":"Reports","schedule_plain":"Daily At 4:47 AM ICT","status":"on","last_run":"Today 4:55 AM"},
+ {"name":"Evening Report","group":"Reports","schedule_plain":"Daily At 6:03 PM ICT","status":"on","last_run":"Not Logged Yet"},
+ {"name":"Mom's Apps · Mom's Amex Offers Reminder","group":"Event/Listener","schedule_plain":"Every 3 Days","status":"on","last_run":"Oct 13, 11:33 PM"}]}
