@@ -1,0 +1,28 @@
+{
+  "agent": "Miles Agent",
+  "type": "Morning Report",
+  "postedAt": "Oct 14, 2026 · 4:55 ICT",
+  "postedAtISO": "2026-10-14T04:55:00+07:00",
+  "lines": [
+    {
+      "category": "Today",
+      "lines": [
+        "Add the team Submit password gate to Mom's Shopping Quiz and Mom's Amex Offers, then publish.",
+        "Watch for the Capital One Ray-Ban bonus points; Mom's next recording reminder is Oct 16."
+      ]
+    },
+    {
+      "category": "Waiting On Max",
+      "lines": [
+        "New card: your priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business).",
+        "Points inventory: your airline and hotel balances, sent privately."
+      ]
+    },
+    {
+      "category": "Freeze",
+      "lines": [
+        "Holding all overnight submissions until you clean up; no changes from them."
+      ]
+    }
+  ]
+}

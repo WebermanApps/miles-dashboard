@@ -1,7 +1,7 @@
 // Miles Agent dashboard content. Edit this file only, then commit and push.
 // PUBLIC SITE: no account numbers, balances, or other sensitive figures.
 window.DASH = {
-  // Update bar: routines replace this (Morning Report 4:47 ICT, Evening Report 18:03 ICT).
+  // Update bar (also mirror type + post time into report.json): routines replace this (Morning Report 4:47 ICT, Evening Report 18:03 ICT).
   // lines can be plain strings, or groups: { category: "...", lines: ["..."] }
   report: {
     title: "Morning Report",
@@ -24,11 +24,14 @@ window.DASH = {
   role: "Head Of All Credit Card Points Projects",
   updated: "Oct 14, 2026, 4:55 AM ICT",
   status: "Today: Submit password gate on both of Mom's apps. Still waiting on Max for card priorities and points balances.",
+  // Decks Waiting On You (R63): unfinished decks, pinned at the very top. Remove a deck once Max submits it. Empty = row hidden.
+  decksWaiting: [
+    { name: "Miles Dashboard Style", url: "https://webermanapps.github.io/style-swipe/?date=miles-1", note: "Branding Style Swipe" },
+    { name: "Mom's Amex Offers Style", url: "https://webermanapps.github.io/style-swipe/?date=jane-amex-2", note: "Branding Style Swipe" }
+  ],
   apps: [
     { name: "Mom's Amex Offers", url: "https://webermanapps.github.io/janes-amex-offers/", note: "Current Amex Offers, easy to scan" },
-    { name: "Mom's Shopping Quiz", url: "https://webermanapps.github.io/amex-brand-swipe/", note: "Swipe through brands to set preferences" },
-    { name: "Miles Style Swipe Deck", url: "https://webermanapps.github.io/style-swipe/?date=miles-1", note: "Branding deck for this dashboard, waiting on Max" },
-    { name: "Mom's Amex Style Swipe Deck", url: "https://webermanapps.github.io/style-swipe/?date=jane-amex-2", note: "Branding deck for Mom's Amex app, waiting on Max" }
+    { name: "Mom's Shopping Quiz", url: "https://webermanapps.github.io/amex-brand-swipe/", note: "Swipe through brands to set preferences" }
   ],
   openItems: [
     { pri: "P1", title: "Get A New Credit Card", detail: "Waiting on Max's priorities: travel perks, cash back, sign-up bonus, or no annual fee; personal or business card. Handed over from Portfolio on Oct 13.", state: "Waiting On Max" },
