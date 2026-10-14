@@ -27,8 +27,9 @@ window.DASH = {
   updated: "Oct 14, 2026, 8:10 PM ICT",
   status: "Five decks are ready at the top. Still waiting on Max for card priorities and points balances.",
   // Decks Waiting On You (R63): unfinished decks, pinned at the very top. Remove a deck once Max submits it. Empty = row hidden.
-  // Swipes completed (19:51 rule): cards answered in real submissions via pull.sh miles, tests excluded.
-  swipesCompleted: 0,
+  // Deck counts (20:13 rule): swipes = answered cards + skips WITH a note (plain skips do not count), real submissions only; shown as decks = swipes/20.
+  swipesToday: 0,
+  swipesTotal: 0,
   decksWaiting: [],
   apps: [
     { name: "Mom's Amex Offers", url: "https://webermanapps.github.io/janes-amex-offers/", note: "Current Amex Offers, easy to scan" },
