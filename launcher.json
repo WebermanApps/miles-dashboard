@@ -4,4 +4,4 @@
  {"id":"travel","label":"Travel Goals","blurb":"Routes, cabin and timing, for points planning"},
  {"id":"dash","label":"Dashboard Deck","blurb":"Layout of this dashboard"}],
  "unfinished":[],
- "ready":{"name":"Cards, Points & Travel","url":"https://webermanapps.github.io/miles-dashboard/deck/?d=miles-q1","total":20,"categories":["card","points","travel","dash"]}}
+ "ready":{"name":"Cards, Points & Travel","url":"https://webermanapps.github.io/miles-dashboard/deck/?d=miles-q1","total":20,"categories":["New Card Priorities","Points & Redemptions","Travel Goals","Dashboard Deck"]}}

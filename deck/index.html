@@ -29,7 +29,7 @@ let D,st=JSON.parse(localStorage.getItem(K)||'{"a":{},"n":{},"s":{},"i":0}'),i=0
 const save=()=>localStorage.setItem(K,JSON.stringify(st)),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const CL={card:'New Card Priorities',points:'Points & Redemptions',travel:'Travel Goals',dash:'Dashboard Deck'};
 function results(){const answered=Object.keys(st.a).length;return{deck:ID,answers:st.a,notes:st.n,skipped:Object.keys(st.s),unanswered:D.cards.filter(c=>!st.a[c.id]&&!st.n[c.id]).map(c=>c.id),answered,total:D.cards.length,test:P.has('test')}}
-function draw(){const c=D.cards[i];document.getElementById('prog').textContent=`Card ${i+1} of ${D.cards.length} · ${Object.keys(st.a).length} answered`;
+function draw(){if(!D.cards.length)return;const c=D.cards[i];document.getElementById('prog').textContent=`Card ${i+1} of ${D.cards.length} · ${Object.keys(st.a).length} answered`;
  document.getElementById('card').innerHTML=`<div class="card"><div class="cat">${esc(CL[c.cat]||c.cat)}</div><h2>${esc(c.q)}</h2><div class="opts">${c.options.map((o,j)=>`<button data-o="${j}" class="${st.a[c.id]===o?'on':''}">${esc(o)}</button>`).join('')}</div>
  <textarea id="note" placeholder="Notes (optional)">${esc(st.n[c.id]||'')}</textarea><div class="nav"><button id="prev">Back</button><button id="skip">Skip</button><button id="next">Next</button></div></div>`;
  document.querySelectorAll('.opts button').forEach(b=>b.onclick=()=>{st.a[c.id]=c.options[b.dataset.o];delete st.s[c.id];save();go(1)});
@@ -37,6 +37,6 @@ function draw(){const c=D.cards[i];document.getElementById('prog').textContent=`
  document.getElementById('prev').onclick=()=>go(-1);document.getElementById('next').onclick=()=>go(1);
  document.getElementById('skip').onclick=()=>{if(!st.a[c.id])st.s[c.id]=1;save();go(1)}}
 function go(d){i=(i+d+D.cards.length)%D.cards.length;st.i=i;save();draw()}
-fetch(ID+'.json?v='+Date.now()).then(r=>r.json()).then(j=>{D=j;document.getElementById('title').textContent=D.name;i=Math.min(st.i||0,D.cards.length-1);draw();
- MWSubmit.button(document.getElementById('submitBox'),{agent:'miles',app:'miles-deck',deck:ID+(P.has('test')?'-test':''),getResults:results,getNotes:()=>Object.entries(st.n).map(([k,v])=>k+': '+v).join('\n')})});
+fetch(ID+'.json?v='+Date.now()).then(r=>r.json()).then(j=>{D=j;st.done=st.done||{};D.cards=D.cards.filter(c=>!st.done[c.id]);if(!D.cards.length){document.getElementById('card').innerHTML='<div class="card"><h2>All Done</h2><p>Every card is answered. A fresh deck will be ready on the dashboard.</p></div>';}document.getElementById('title').textContent=D.name;i=Math.min(st.i||0,D.cards.length-1);draw();
+ MWSubmit.button(document.getElementById('submitBox'),{agent:'miles',app:'miles-deck',deck:ID+(P.has('test')?'-test':''),getResults:()=>{const r=results();D.cards.forEach(c=>{if(st.a[c.id]||st.n[c.id])st.done[c.id]=1});save();return r},getNotes:()=>Object.entries(st.n).map(([k,v])=>k+': '+v).join('\n')})});
 </script></body></html>
