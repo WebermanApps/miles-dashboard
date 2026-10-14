@@ -1,14 +1,15 @@
 {
   "agent": "Miles Agent",
-  "type": "Morning Report",
-  "postedAt": "Oct 14, 2026 · 4:55 ICT",
-  "postedAtISO": "2026-10-14T04:55:00+07:00",
+  "type": "Evening Report",
+  "postedAt": "Oct 14, 2026 · 18:12 ICT",
+  "postedAtISO": "2026-10-14T18:12:48+07:00",
   "lines": [
     {
       "category": "Today",
       "lines": [
-        "Add the team Submit password gate to Mom's Shopping Quiz and Mom's Amex Offers, then publish.",
-        "Watch for the Capital One Ray-Ban bonus points; Mom's next recording reminder is Oct 16."
+        "Submit password gate went live on Mom's Shopping Quiz and Mom's Amex Offers.",
+        "Dashboard: pinned decks, Points Balances Strip (program names only), Routines section, Open a New Deck launcher with the 20-card Cards, Points & Travel deck, Share icon in the header.",
+        "Your New Card Pick layout picks are saved (fold-out sections and picture-on-top cards); Mom's Ends Soon side menu waits for your OK."
       ]
     },
     {
@@ -19,10 +20,20 @@
       ]
     },
     {
-      "category": "Freeze",
+      "category": "Tomorrow",
       "lines": [
-        "Holding all overnight submissions until you clean up; no changes from them."
+        "Morning Report by 5:00, then apply any Cards, Points & Travel deck answers.",
+        "Still watching for the Ray-Ban bonus points; Mom's next recording reminder is Oct 16."
       ]
     }
-  ]
+  ],
+  "report_type": "Evening Report",
+  "posted_at": "2026-10-14T18:12:48+07:00",
+  "due_by": "18:00 ICT",
+  "late": true,
+  "late_min": 12,
+  "next": {
+    "report_type": "Morning Report",
+    "due_at": "by 5:00 AM ICT"
+  }
 }
