@@ -87,6 +87,7 @@ ol.siderule li{border-left:3px solid #B8742A;padding:6px 0 6px 12px;margin:0 0 1
 .topbar .tb{max-width:1100px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:12px;min-height:48px}
 .topbar .homelink{display:inline-flex;align-items:center;gap:6px;min-height:44px;min-width:44px;color:#1F7A7A;text-decoration:none;font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.16em}
 .topbar .homelink:hover{text-decoration:underline}
+.tbshare{margin-left:2px;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;background:none;border:0;color:#1F7A7A;cursor:pointer;border-radius:8px}.tbshare:hover{background:rgba(31,122,122,.08)}
 .tbname{font-family:var(--mw-font-heading);font-weight:700;font-size:1.1rem}
 .tbupd{margin-left:auto;color:var(--mw-muted-text);font-size:.8rem;text-align:right}
 .wrap{padding-top:16px}h1{margin-top:2px}.role{margin:2px 0 10px}
@@ -138,7 +139,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
 </defs></svg>
-<header class="topbar"><div class="tb"><a class="homelink" href="https://webermanapps.github.io/a-o956qercs5ubd57y/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a><span class="tbname">Miles Agent</span><span class="tbupd"><span class="full">Updated <span id="tupd"></span></span><span class="short" id="tupds"></span></span></div></header>
+<header class="topbar"><div class="tb"><a class="homelink" href="https://webermanapps.github.io/a-o956qercs5ubd57y/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a><span class="tbname">Miles Agent</span><span class="tbupd"><span class="full">Updated <span id="tupd"></span></span><span class="short" id="tupds"></span></span><button class="tbshare" id="share" aria-label="Share"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-share"/></svg></button></div></header>
 <div class="wrap">
 <div data-launcher="launcher.json"></div><script src="https://webermanapps.github.io/style-swipe/kit/deck-launcher.js?v=1" defer></script>
 <nav class="decks" id="decks" aria-label="Decks Waiting On You" hidden><span class="dlbl">Decks Waiting On You</span><span class="dlist" id="dlist"></span></nav>
@@ -154,7 +155,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 <section data-routines="routines.json" id="routines"></section><script src="https://webermanapps.github.io/style-swipe/kit/routines-section.js?v=2" defer></script>
 <section class="card recent"><h2><svg class="ic"><use href="#i-check"/></svg>Recent Work</h2><ul id="recent" class="rows"></ul><button class="seeall" id="seeall" hidden></button></section>
 </div>
-<div class="share"><button class="btn mw-hover" id="share"><svg class="ic"><use href="#i-share"/></svg>Share</button></div>
+
 <footer>Built by <a class="mw-hover" href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></footer>
 </div><div id="toast">Link copied</div>
 <script src="data.js"></script>
