@@ -1,0 +1,7 @@
+{"agent":"miles","categories":[
+ {"id":"card","label":"New Card Priorities","blurb":"Travel perks, cash back, sign-up bonus, annual fee, personal or business"},
+ {"id":"points","label":"Points & Redemptions","blurb":"Transfer partners and how you like to redeem, including Aeroplan for ANA"},
+ {"id":"travel","label":"Travel Goals","blurb":"Routes, cabin and timing, for points planning"},
+ {"id":"dash","label":"Dashboard Deck","blurb":"Layout of this dashboard"}],
+ "unfinished":[],
+ "ready":{"name":"Cards, Points & Travel","url":"https://webermanapps.github.io/miles-dashboard/deck/?d=miles-q1","total":20,"categories":["card","points","travel","dash"]}}

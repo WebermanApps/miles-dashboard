@@ -126,7 +126,8 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 .dk{display:inline-flex;flex-direction:column;justify-content:center;min-height:44px;padding:4px 14px;border:1px solid var(--mw-border);border-radius:999px;color:var(--mw-foreground);text-decoration:none;font-weight:600;font-size:.92rem;line-height:1.2}.dk small{font-weight:400;font-size:.72rem;color:var(--mw-muted-text)}
 .pts{margin-bottom:12px}.ptl{display:grid;gap:8px;grid-template-columns:1fr}@media(min-width:760px){.ptl{grid-template-columns:repeat(3,1fr)}}.pt{min-height:44px;padding:8px 12px;border:1px solid var(--mw-border);border-left:4px solid #B8862B;border-radius:10px;display:flex;flex-direction:column;justify-content:center}.pt b{font-weight:600}.pt small{color:var(--mw-muted-text);font-size:.78rem}
 </style><script src="ptr.js" defer></script>
-<link rel="stylesheet" href="https://webermanapps.github.io/style-swipe/kit/routines-section.css?v=1">
+<link rel="stylesheet" href="https://webermanapps.github.io/style-swipe/kit/routines-section.css?v=2">
+<link rel="stylesheet" href="https://webermanapps.github.io/style-swipe/kit/deck-launcher.css?v=1">
 </head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
@@ -139,6 +140,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 </defs></svg>
 <header class="topbar"><div class="tb"><a class="homelink" href="https://webermanapps.github.io/a-o956qercs5ubd57y/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Apps Home</a><span class="tbname">Miles Agent</span><span class="tbupd"><span class="full">Updated <span id="tupd"></span></span><span class="short" id="tupds"></span></span></div></header>
 <div class="wrap">
+<div data-launcher="launcher.json"></div><script src="https://webermanapps.github.io/style-swipe/kit/deck-launcher.js?v=1" defer></script>
 <nav class="decks" id="decks" aria-label="Decks Waiting On You" hidden><span class="dlbl">Decks Waiting On You</span><span class="dlist" id="dlist"></span></nav>
 <div class="wm">Max Weberman · Command Center</div>
 <h1 id="agent"></h1><div class="role" id="role"></div>
@@ -149,7 +151,7 @@ li.rrow .date{margin-left:auto;text-align:right;white-space:nowrap;color:var(--m
 <div class="status"><div class="lbl">Current Status</div><div id="status"></div></div>
 <div class="grid">
 <section class="card span"><h2><svg class="ic"><use href="#i-list"/></svg>Open Items</h2><ul id="open" class="rows"></ul></section>
-<section data-routines="routines.json" id="routines"></section><script src="https://webermanapps.github.io/style-swipe/kit/routines-section.js?v=1" defer></script>
+<section data-routines="routines.json" id="routines"></section><script src="https://webermanapps.github.io/style-swipe/kit/routines-section.js?v=2" defer></script>
 <section class="card recent"><h2><svg class="ic"><use href="#i-check"/></svg>Recent Work</h2><ul id="recent" class="rows"></ul><button class="seeall" id="seeall" hidden></button></section>
 </div>
 <div class="share"><button class="btn mw-hover" id="share"><svg class="ic"><use href="#i-share"/></svg>Share</button></div>

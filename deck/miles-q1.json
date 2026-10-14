@@ -1,0 +1,226 @@
+{
+ "id": "miles-q1",
+ "name": "Cards, Points & Travel",
+ "categories": [
+  "card",
+  "points",
+  "travel",
+  "dash"
+ ],
+ "cards": [
+  {
+   "id": "q1",
+   "cat": "card",
+   "q": "Which matters most in your next card?",
+   "options": [
+    "Travel perks",
+    "Cash back",
+    "Big sign-up bonus",
+    "No annual fee"
+   ]
+  },
+  {
+   "id": "q2",
+   "cat": "card",
+   "q": "Personal or business card?",
+   "options": [
+    "Personal",
+    "Business",
+    "Either",
+    "Not sure"
+   ]
+  },
+  {
+   "id": "q3",
+   "cat": "card",
+   "q": "Highest annual fee you'd pay if perks cover it?",
+   "options": [
+    "$0",
+    "Up to $100",
+    "Up to $400",
+    "Over $400 is fine"
+   ]
+  },
+  {
+   "id": "q4",
+   "cat": "card",
+   "q": "How hard can the sign-up spend be?",
+   "options": [
+    "Easy, normal spending",
+    "Medium, some planning",
+    "High, I can push spend",
+    "Skip bonus cards"
+   ]
+  },
+  {
+   "id": "q5",
+   "cat": "card",
+   "q": "Airport lounge access?",
+   "options": [
+    "Must have",
+    "Nice to have",
+    "Don't care"
+   ]
+  },
+  {
+   "id": "q6",
+   "cat": "card",
+   "q": "Stay in one points ecosystem or spread out?",
+   "options": [
+    "Stick with Capital One",
+    "Add Amex MR",
+    "Add Chase UR",
+    "Whatever earns most"
+   ]
+  },
+  {
+   "id": "q7",
+   "cat": "card",
+   "q": "Foreign transaction fees?",
+   "options": [
+    "Must be zero",
+    "Prefer zero",
+    "Don't care"
+   ]
+  },
+  {
+   "id": "q8",
+   "cat": "points",
+   "q": "How do you like to redeem points?",
+   "options": [
+    "Business/first class flights",
+    "Economy flights, more trips",
+    "Hotels",
+    "Cash or statement credit"
+   ]
+  },
+  {
+   "id": "q9",
+   "cat": "points",
+   "q": "Aeroplan for ANA flights: worth transferring Capital One miles?",
+   "options": [
+    "Yes, if seats show up",
+    "Only for business class",
+    "Prefer other options",
+    "Explain it first"
+   ]
+  },
+  {
+   "id": "q10",
+   "cat": "points",
+   "q": "Transfer partners you care about most?",
+   "options": [
+    "Star Alliance (Aeroplan, ANA)",
+    "Oneworld",
+    "SkyTeam",
+    "Hotel partners"
+   ]
+  },
+  {
+   "id": "q11",
+   "cat": "points",
+   "q": "How far ahead will you book award flights?",
+   "options": [
+    "Under 1 month",
+    "1-3 months",
+    "3-11 months",
+    "Last-minute only"
+   ]
+  },
+  {
+   "id": "q12",
+   "cat": "points",
+   "q": "Ok to pay fuel surcharges on awards?",
+   "options": [
+    "Never",
+    "Small ones ok",
+    "Don't mind"
+   ]
+  },
+  {
+   "id": "q13",
+   "cat": "points",
+   "q": "Should I alert you to transfer bonuses?",
+   "options": [
+    "Yes, every one",
+    "Only big ones (30%+)",
+    "No"
+   ]
+  },
+  {
+   "id": "q14",
+   "cat": "travel",
+   "q": "Main routes for points planning?",
+   "options": [
+    "Bangkok to Japan",
+    "Bangkok to US",
+    "Within Asia",
+    "Europe"
+   ]
+  },
+  {
+   "id": "q15",
+   "cat": "travel",
+   "q": "Cabin you aim for on long flights?",
+   "options": [
+    "Business",
+    "Premium economy",
+    "Economy",
+    "Depends on price"
+   ]
+  },
+  {
+   "id": "q16",
+   "cat": "travel",
+   "q": "When is your next big trip?",
+   "options": [
+    "Within 3 months",
+    "3-6 months",
+    "6-12 months",
+    "No plans yet"
+   ]
+  },
+  {
+   "id": "q17",
+   "cat": "travel",
+   "q": "Travelling solo or with others?",
+   "options": [
+    "Solo",
+    "With one person",
+    "Family/group",
+    "Varies"
+   ]
+  },
+  {
+   "id": "q18",
+   "cat": "dash",
+   "q": "Most useful top section on this dashboard?",
+   "options": [
+    "Decks waiting",
+    "Apps",
+    "Report",
+    "Open items"
+   ]
+  },
+  {
+   "id": "q19",
+   "cat": "dash",
+   "q": "Morning/Evening report length?",
+   "options": [
+    "One line",
+    "Short list",
+    "Full detail"
+   ]
+  },
+  {
+   "id": "q20",
+   "cat": "dash",
+   "q": "Show the Points Balances strip even without numbers?",
+   "options": [
+    "Yes, keep it",
+    "Hide until balances exist",
+    "Move lower"
+   ]
+  }
+ ]
+}
