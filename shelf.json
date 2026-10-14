@@ -1,0 +1,38 @@
+{
+ "agent": "miles",
+ "decks": [
+  {
+   "id": "miles-card-ready-1",
+   "name": "New Card Priorities",
+   "url": "https://webermanapps.github.io/style-swipe/miles-card-ready-1-j8ipxh/",
+   "total": 20,
+   "topic": "miles-card",
+   "blurb": "20 cards, ready now"
+  },
+  {
+   "id": "miles-points-ready-1",
+   "name": "Points & Redemptions",
+   "url": "https://webermanapps.github.io/style-swipe/miles-points-ready-1-t97ue7/",
+   "total": 20,
+   "topic": "miles-points",
+   "blurb": "20 cards, ready now"
+  },
+  {
+   "id": "miles-travel-ready-1",
+   "name": "Travel Goals",
+   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-t97ue7/",
+   "total": 20,
+   "topic": "miles-travel",
+   "blurb": "20 cards, ready now"
+  },
+  {
+   "id": "miles-ready-1",
+   "name": "Dashboard Deck",
+   "url": "https://webermanapps.github.io/style-swipe/miles-ready-1-fdl26o/",
+   "total": 20,
+   "topic": "miles",
+   "blurb": "20 cards, ready now"
+  }
+ ],
+ "updated": "2026-10-14T19:35:55+07:00"
+}
