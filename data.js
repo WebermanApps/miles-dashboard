@@ -27,10 +27,7 @@ window.DASH = {
   updated: "Oct 14, 2026, 6:12 PM ICT",
   status: "Submit password gate is live on both of Mom's apps and the dashboard has its deck launcher and Routines. Still waiting on Max for card priorities and points balances.",
   // Decks Waiting On You (R63): unfinished decks, pinned at the very top. Remove a deck once Max submits it. Empty = row hidden.
-  decksWaiting: [
-    { name: "Miles Dashboard Style", url: "https://webermanapps.github.io/style-swipe/?date=miles-1", note: "Branding Style Swipe" },
-    { name: "Mom's Amex Offers Style", url: "https://webermanapps.github.io/style-swipe/?date=jane-amex-2", note: "Branding Style Swipe" }
-  ],
+  decksWaiting: [],
   apps: [
     { name: "Mom's Amex Offers", url: "https://webermanapps.github.io/janes-amex-offers/", note: "Current Amex Offers, easy to scan" },
     { name: "Mom's Shopping Quiz", url: "https://webermanapps.github.io/amex-brand-swipe/", note: "Swipe through brands to set preferences" }

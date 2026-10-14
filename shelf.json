@@ -24,7 +24,24 @@
    "total": 20,
    "topic": "miles-travel",
    "blurb": "20 cards, ready now"
+  }
+ ],
+ "updated": "2026-10-14T19:50:00+07:00",
+ "pinned": [
+  {
+   "name": "Miles Dashboard Style",
+   "url": "https://webermanapps.github.io/style-swipe/?date=miles-1",
+   "total": 20,
+   "answered": 0
   },
+  {
+   "name": "Mom's Amex Offers Style",
+   "url": "https://webermanapps.github.io/style-swipe/?date=jane-amex-2",
+   "total": 20,
+   "answered": 0
+  }
+ ],
+ "queued": [
   {
    "id": "miles-ready-1",
    "name": "Dashboard Deck",
@@ -33,6 +50,5 @@
    "topic": "miles",
    "blurb": "20 cards, ready now"
   }
- ],
- "updated": "2026-10-14T19:35:55+07:00"
+ ]
 }
