@@ -5,10 +5,10 @@ window.DASH = {
   // lines can be plain strings, or groups: { category: "...", lines: ["..."] }
   report: {
     title: "Morning Report",
-    timestamp: "Oct 14, 2026 · 20:10 ICT",
+    timestamp: "Oct 15, 2026 · 7:27 ICT (late, due 5:00)",
     lines: [
       { category: "Ready Now", lines: [
-        "Five decks at the top: Miles Dashboard Style and Mom's Amex Offers Style to finish, plus New Card Priorities, Points & Redemptions and Travel Goals (20 cards each).",
+        "Late today: the 4:47 run failed because usage ran out. Five decks at the top: Miles Dashboard Style and Mom's Amex Offers Style to finish, plus New Card Priorities, Points & Redemptions and Travel Goals (20 cards each).",
         "Points Balances Strip lists Venture X, Aeroplan and ANA, with no numbers." ] },
       { category: "Waiting On Max", lines: [
         "New card: your priorities (travel perks, cash back, sign-up bonus or no annual fee; personal or business). The New Card Priorities deck covers this.",
@@ -16,7 +16,8 @@ window.DASH = {
         "Switching Mom's apps to the private Submit: ready, waiting on your OK." ] },
       { category: "Watching", lines: [
         "Ray-Ban bonus points have not posted yet.",
-        "Mom's next offers recording reminder is Oct 16." ] }
+        "Mom's next offers recording reminder is Oct 16.",
+        "Waiting on you: which of Mom's apps gets the password you picked."  ] }
     ]
   },
   // Urgent and warning items: shown as ONE collapsed line ("1 Urgent · 2 Warnings") that expands on tap/Enter.

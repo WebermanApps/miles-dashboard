@@ -2,7 +2,8 @@
   "agent": "Miles Agent",
   "type": "Morning Report",
   "dueBy": "05:00 ICT",
-  "postedAt": "Oct 14, 2026 \u00b7 20:10 ICT",
-  "postedAtISO": "2026-10-14T20:10:00+07:00",
-  "note": "Morning Report only; Evening Report retired Oct 14."
+  "postedAt": "Oct 15, 2026 \u00b7 07:27 ICT",
+  "postedAtISO": "2026-10-15T07:27:00+07:00",
+  "late": true,
+  "note": "Late: 4:47 routine failed (usage ran out). No new deck submissions."
 }
