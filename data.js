@@ -37,20 +37,15 @@ window.DASH = {
     { name: "Mom's Shopping Quiz", url: "https://webermanapps.github.io/amex-brand-swipe/", note: "Swipe through brands to set preferences" }
   ],
   openItems: [
-    { pri: "P1", title: "Get A New Credit Card", detail: "Waiting on Max's priorities: travel perks, cash back, sign-up bonus, or no annual fee; personal or business card. Handed over from Portfolio on Oct 13.", state: "Waiting On Max" },
-    { pri: "", title: "Points Balances Inventory", detail: "Airline and hotel programs, from Portfolio.", state: "Waiting On Max" },
-    { pri: "", title: "Mom's Offers Refresh", detail: "Done Oct 13 from the Oct 12 screen recording (102 offers).", state: "Done" },
-    { pri: "", title: "Submit Password On Mom's Apps", detail: "Both apps' Submit now goes through the team password gate (live Oct 14).", state: "Done" },
+    { pri: "P1", title: "Get A New Credit Card", detail: "Your priorities: travel perks, cash back, sign-up bonus or no annual fee; personal or business card. The New Card Priorities deck covers this.", state: "Waiting On Max" },
+    { pri: "", title: "Points Balances Inventory", detail: "Your airline and hotel balances, sent privately (not for the dashboard). Goes to Portfolio as a net-worth estimate.", state: "Waiting On Max" },
+    { pri: "", title: "Mom's Password", detail: "Which app gets the password you picked: Mom's Amex Offers or Mom's Shopping Quiz?", state: "Waiting On Max" },
+    { pri: "", title: "Private Submit For Mom's Apps", detail: "Switch both apps to the private Submit receiver? The draft was lost in the Oct 16 box rollback, so I rebuild it once you say yes.", state: "Waiting On Max" },
+    { pri: "", title: "Mom's Shopping Quiz Brand Update", detail: "Bring the quiz up to the newest brand rules, like the Oct 15 Amex Offers polish?", state: "Waiting On Max" },
+    { pri: "", title: "Rename The janes-amex-offers Repo", detail: "Drops 'jane' from the link but breaks Mom's saved link.", state: "Waiting On Max" },
     { pri: "", title: "Capital One Ray-Ban Bonus", detail: "Watching for the 1,500 bonus points to post.", state: "Watching" }
   ],
-  decisions: [
-    "Your new-card priorities: travel perks, cash back, sign-up bonus or no annual fee; personal or business?",
-    "Your points balances for the inventory (send privately, not for the dashboard)?",
-    "Switch Mom's apps to the private Submit receiver (ready and tested)?",
-    "Mom's Amex Offers Ends Soon: publish your side menu with jungle accent pick?",
-    "Bring both of Mom's apps up to the newest brand rules?",
-    "Rename the janes-amex-offers repo? This breaks the old link."
-  ],
+  decisions: [],
   routines: [
     { name: "Morning Report", when: "Daily, 4:47 ICT" },
     { name: "Mom's Recording Upload Reminder", when: "Every 3 days, next Oct 16" }
