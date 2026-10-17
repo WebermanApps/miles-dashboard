@@ -2,31 +2,73 @@
  "agent": "miles",
  "decks": [
   {
-   "id": "miles-card-ready-1",
-   "name": "New Card Priorities",
-   "url": "https://webermanapps.github.io/style-swipe/miles-card-ready-1-j8ipxh/",
-   "total": 20,
+   "id": "miles-card-ready-1-type-ecosystem",
+   "name": "New Card: Type & Ecosystem",
+   "url": "https://webermanapps.github.io/style-swipe/miles-card-ready-1-type-ecosystem-ckm28v/",
+   "total": 10,
    "topic": "miles-card",
-   "blurb": "20 cards, ready now"
+   "answered": 0,
+   "added": "2026-10-17T08:05:35+07:00",
+   "split_from": "miles-card-ready-1",
+   "blurb": "10 cards, ready now"
   },
   {
-   "id": "miles-points-ready-1",
-   "name": "Points & Redemptions",
-   "url": "https://webermanapps.github.io/style-swipe/miles-points-ready-1-t97ue7/",
-   "total": 20,
+   "id": "miles-card-ready-1-perks-timing",
+   "name": "New Card: Perks & Timing",
+   "url": "https://webermanapps.github.io/style-swipe/miles-card-ready-1-perks-timing-zy5cj3/",
+   "total": 10,
+   "topic": "miles-card",
+   "answered": 0,
+   "added": "2026-10-17T08:05:35+07:00",
+   "split_from": "miles-card-ready-1",
+   "blurb": "10 cards, ready now"
+  },
+  {
+   "id": "miles-points-ready-1-redemption-choices",
+   "name": "Points: Redemption Choices",
+   "url": "https://webermanapps.github.io/style-swipe/miles-points-ready-1-redemption-choices-818ouj/",
+   "total": 10,
    "topic": "miles-points",
-   "blurb": "20 cards, ready now"
+   "answered": 0,
+   "added": "2026-10-17T08:05:35+07:00",
+   "split_from": "miles-points-ready-1",
+   "blurb": "10 cards, ready now"
   },
   {
-   "id": "miles-travel-ready-1",
-   "name": "Travel Goals",
-   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-t97ue7/",
-   "total": 20,
+   "id": "miles-points-ready-1-alerts-booking-habits",
+   "name": "Points: Alerts & Booking Habits",
+   "url": "https://webermanapps.github.io/style-swipe/miles-points-ready-1-alerts-booking-habits-op9x42/",
+   "total": 10,
+   "topic": "miles-points",
+   "answered": 0,
+   "added": "2026-10-17T08:05:35+07:00",
+   "split_from": "miles-points-ready-1",
+   "blurb": "10 cards, ready now"
+  },
+  {
+   "id": "miles-travel-ready-1-where-when",
+   "name": "Travel Goals: Flights & Planning",
+   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-where-when-qvals6/",
+   "total": 10,
    "topic": "miles-travel",
-   "blurb": "20 cards, ready now"
+   "answered": 0,
+   "added": "2026-10-17T08:05:35+07:00",
+   "split_from": "miles-travel-ready-1",
+   "blurb": "10 cards, ready now"
+  },
+  {
+   "id": "miles-travel-ready-1-flights-planning",
+   "name": "Travel Goals: Where & When",
+   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-flights-planning-priqjg/",
+   "total": 10,
+   "topic": "miles-travel",
+   "answered": 0,
+   "added": "2026-10-17T08:05:35+07:00",
+   "split_from": "miles-travel-ready-1",
+   "blurb": "10 cards, ready now"
   }
  ],
- "updated": "2026-10-14T19:50:00+07:00",
+ "updated": "2026-10-17T08:05:35+07:00",
  "pinned": [
   {
    "name": "Miles Dashboard Style",
@@ -50,5 +92,52 @@
    "topic": "miles",
    "blurb": "20 cards, ready now"
   }
- ]
+ ],
+ "unlisted": [
+  {
+   "id": "miles-card-ready-1",
+   "name": "New Card Priorities",
+   "url": "https://webermanapps.github.io/style-swipe/miles-card-ready-1-j8ipxh/",
+   "total": 20,
+   "topic": "miles-card",
+   "blurb": "20 cards, ready now",
+   "unlisted_at": "2026-10-17T08:05:35+07:00",
+   "split_into": [
+    "miles-card-ready-1-type-ecosystem",
+    "miles-card-ready-1-perks-timing"
+   ],
+   "note": "R86 (Max Oct 17 2026 07:50 ICT): unanswered 20-pick deck split into two 10-pick decks; original unlisted (page, file and any votes kept)"
+  },
+  {
+   "id": "miles-points-ready-1",
+   "name": "Points & Redemptions",
+   "url": "https://webermanapps.github.io/style-swipe/miles-points-ready-1-t97ue7/",
+   "total": 20,
+   "topic": "miles-points",
+   "blurb": "20 cards, ready now",
+   "unlisted_at": "2026-10-17T08:05:35+07:00",
+   "split_into": [
+    "miles-points-ready-1-redemption-choices",
+    "miles-points-ready-1-alerts-booking-habits"
+   ],
+   "note": "R86 (Max Oct 17 2026 07:50 ICT): unanswered 20-pick deck split into two 10-pick decks; original unlisted (page, file and any votes kept)"
+  },
+  {
+   "id": "miles-travel-ready-1",
+   "name": "Travel Goals",
+   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-t97ue7/",
+   "total": 20,
+   "topic": "miles-travel",
+   "blurb": "20 cards, ready now",
+   "unlisted_at": "2026-10-17T08:05:35+07:00",
+   "split_into": [
+    "miles-travel-ready-1-where-when",
+    "miles-travel-ready-1-flights-planning"
+   ],
+   "note": "R86 (Max Oct 17 2026 07:50 ICT): unanswered 20-pick deck split into two 10-pick decks; original unlisted (page, file and any votes kept)"
+  }
+ ],
+ "cap": 10,
+ "cap_note": "R86 (Max Oct 17 2026 07:50 ICT): every shelf shows up to 10 decks (pinned included), 10 picks per deck; in-progress first, done last (kit deck-shelf.js sort)",
+ "held": []
 }
