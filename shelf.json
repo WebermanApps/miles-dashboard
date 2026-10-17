@@ -46,29 +46,51 @@
    "blurb": "10 cards, ready now"
   },
   {
-   "id": "miles-travel-ready-1-where-when",
+   "id": "miles-travel-ready-1-flights-planning-deck",
    "name": "Travel Goals: Flights & Planning",
-   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-where-when-qvals6/",
+   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-flights-planning-deck-mqc4s6/",
    "total": 10,
    "topic": "miles-travel",
    "answered": 0,
    "added": "2026-10-17T08:05:35+07:00",
    "split_from": "miles-travel-ready-1",
+   "blurb": "10 cards, ready now",
+   "renamed_from": "miles-travel-ready-1-where-when"
+  },
+  {
+   "id": "miles-travel-ready-1-where-when-deck",
+   "name": "Travel Goals: Where & When",
+   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-where-when-deck-oe6kg8/",
+   "total": 10,
+   "topic": "miles-travel",
+   "answered": 0,
+   "added": "2026-10-17T08:05:35+07:00",
+   "split_from": "miles-travel-ready-1",
+   "blurb": "10 cards, ready now",
+   "renamed_from": "miles-travel-ready-1-flights-planning"
+  },
+  {
+   "id": "miles-points-and-mom-s-apps-deck",
+   "name": "Points And Mom's Apps Deck",
+   "url": "https://webermanapps.github.io/style-swipe/miles-points-and-mom-s-apps-deck-28tn1w/",
+   "total": 10,
+   "topic": "miles",
+   "added": "2026-10-17T09:48:43+07:00",
+   "tag": "Points",
    "blurb": "10 cards, ready now"
   },
   {
-   "id": "miles-travel-ready-1-flights-planning",
-   "name": "Travel Goals: Where & When",
-   "url": "https://webermanapps.github.io/style-swipe/miles-travel-ready-1-flights-planning-priqjg/",
+   "id": "miles-mom-s-apps-and-offers-deck",
+   "name": "Mom's Apps And Offers Deck",
+   "url": "https://webermanapps.github.io/style-swipe/miles-mom-s-apps-and-offers-deck-t4ubuu/",
    "total": 10,
-   "topic": "miles-travel",
-   "answered": 0,
-   "added": "2026-10-17T08:05:35+07:00",
-   "split_from": "miles-travel-ready-1",
+   "topic": "miles",
+   "added": "2026-10-17T09:48:57+07:00",
+   "tag": "Mom's Apps",
    "blurb": "10 cards, ready now"
   }
  ],
- "updated": "2026-10-17T08:05:35+07:00",
+ "updated": "2026-10-17T09:55:08+07:00",
  "pinned": [
   {
    "name": "Miles Dashboard Style",
@@ -131,13 +153,14 @@
    "blurb": "20 cards, ready now",
    "unlisted_at": "2026-10-17T08:05:35+07:00",
    "split_into": [
-    "miles-travel-ready-1-where-when",
-    "miles-travel-ready-1-flights-planning"
+    "miles-travel-ready-1-flights-planning-deck",
+    "miles-travel-ready-1-where-when-deck"
    ],
    "note": "R86 (Max Oct 17 2026 07:50 ICT): unanswered 20-pick deck split into two 10-pick decks; original unlisted (page, file and any votes kept)"
   }
  ],
  "cap": 10,
  "cap_note": "R86 (Max Oct 17 2026 07:50 ICT): every shelf shows up to 10 decks (pinned included), 10 picks per deck; in-progress first, done last (kit deck-shelf.js sort)",
- "held": []
+ "held": [],
+ "done": []
 }
