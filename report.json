@@ -1,9 +1,6 @@
 {
   "agent": "Miles Agent",
   "type": "Morning Report",
-  "dueBy": "05:00 ICT",
-  "postedAt": "Oct 15, 2026 \u00b7 07:27 ICT",
-  "postedAtISO": "2026-10-15T07:27:00+07:00",
-  "late": true,
-  "note": "Late: 4:47 routine failed (usage ran out). No new deck submissions."
+  "lines": [],
+  "note": "Cleared Oct 20 2026 per Max; only Grok Bot and Swatch post morning reports."
 }
